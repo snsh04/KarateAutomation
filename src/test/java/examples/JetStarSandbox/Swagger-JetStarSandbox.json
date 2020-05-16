@@ -1,0 +1,92 @@
+{
+  "apiConf": {
+		"subscriptionTiers": ["Test","Bronze","Silver","Gold","Bronze_Auto-Approved"],
+        "domain": "flight",
+        "wso2": true,
+        "defaultVersion": true,
+        "abc": "abc",
+        "backupToS3": false,
+        "includeVersion": false,
+		"internalGateway":false,
+        "externalGateway":false,
+		"jetstarInternalGateway":true,
+		"jetstarExternalGateway":true,
+        "corsHeaders": {
+            "Access-Control-Allow-Headers": "origin,content-type, accept, x-appid, x-sessionid, x-corrid,hb",
+            "Access-Control-Allow-Methods":"GET",
+            "Access-Control-Allow-Origin":"freight.random.com,batman.com",
+            "Access-Control-Allow-Credentials":"false"
+        }  
+    },
+    "swagger": {
+   "swagger":"2.0",
+   "info":{  
+      "version":"v1",
+      "title":"REGTEST_falseSBEnd",
+      "description":"Countries_API",
+      "x-businessOwner":{  
+         "name":"Sneha Shukla",
+         "email":"sneha.shukla@random.com"
+      },
+      "x-technicalOwner":{  
+         "name":"Regtest",
+         "email":"regtest@random.com"
+      }
+   },
+   "host":"demo.dev.dev.a878-02.ams10.nonp.cloud.random.com/api",
+   "basePath":"/country-falseSB",
+   "schemes":[  
+      "https"
+   ],
+   "paths":{  
+
+      "/countries":{  
+         "get":{  
+            "summary":"List of all countries",
+            "description":"What do you wantttttt!!!!!",
+            "operationId":"list_countries",
+            "produces":[  
+               "application/json"
+            ]
+         }
+      },
+      "/countries/testing":{  
+         "get":{  
+            "summary":"Regular Test",
+            "description":"Stop Pingingg mee!!!",
+            "operationId":"list_countries",
+            "produces":[  
+               "application/json"
+            ]
+         },
+         "post":{  
+            "summary":"Add a new country",
+            "description":"Create a new country",
+            "operationId":"create_country",
+            "produces":[  
+               "application/json"
+            ]
+         }
+      },
+      "/countries/{countryId}":{  
+         "get":{  
+            "summary":"Get a specific country by ID (Example: 'au')",
+            "description":"Get details of a single country",
+            "operationId":"details_country",
+            "produces":[  
+               "application/json"
+            ],
+            "parameters":[  
+               {  
+                  "name":"countryId",
+                  "in":"query",
+                  "required":true,
+                  "type":"string"
+               }
+            ]
+         }
+      }
+   }
+
+  }
+}

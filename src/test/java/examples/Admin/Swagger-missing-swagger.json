@@ -1,0 +1,18 @@
+{
+	"apiConf": {
+		"name": "Regtest_CORSOrigin",
+		"domain": "test",
+		"wso2": true,
+		"lambda": true,
+		"publish": true,
+		"defaultVersion": false,
+		"includeVersion": false,
+		"subscriptionTiers": ["Unlimited","Gold","Bronze_Auto-Approved"],
+		        "corsHeaders": {
+            "Access-Control-Allow-Methods":"GET",
+            "Access-Control-Allow-Origin":"apistore-dev-dev-a878-14-ams10-nonp.cloud.random.com"
+     
+			
+        }
+	}
+}

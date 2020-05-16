@@ -1,0 +1,89 @@
+{
+"swagger": {
+   "swagger":"2.0",
+   "host":"auth.dev.dev.a878-13.ams10.nonp.cloud.random.com",
+   "basePath":"/oauth2",
+   "info":{ 
+      "description":"Identity Server stuff",
+      "version":"v1",
+      "title":"Identity Server",
+      "contact":{ 
+         "email":"APIGateway@random.com"
+      },
+      "x-businessOwner":{ 
+         "name":"Samuel Purchase",
+         "email":"sampurchase@random.com"
+      },
+      "x-technicalOwner":{ 
+         "name":"Jordan Murray",
+         "email":"jordan.murray@random.com"
+      }
+   },
+   "schemes":[ 
+      "https"
+   ],
+   "paths":{ 
+      "/jwks":{ 
+         "get":{ 
+            "tags":[ 
+               "jwks"
+            ],
+            "summary":"Grab the JWKS from Key Managers OAUTH2 Endpoint",
+            "description":"get JWKS bruh",
+            "operationId":"get JWKS",
+            "consumes":[ 
+               "application/json"
+            ],
+            "produces":[ 
+               "application/json"
+            ],
+            "responses":{ 
+               "200":{ 
+                  "description":"nice"
+               },
+               "405":{ 
+                  "description":"Invalid input"
+               }
+            },
+            "x-auth-type":"None",
+            "x-throttling-tier":"Unlimited"
+         }
+      },
+      "/oidcdiscovery":{ 
+         "get":{ 
+            "responses":{ 
+               "200":{ 
+                  "description":""
+               }
+            },
+            "summary":"This should not work",
+            "produces":[ 
+               "application/json"
+            ],
+            "consumes":[ 
+               "application/json"
+            ],
+            "x-auth-type":"None",
+            "x-throttling-tier":"Unlimited"
+         }
+      }
+   }
+   },
+"apiConf": {
+
+		"domain": "pricing",
+		"wso2": true,
+		"lambda": false,
+		"publish": true,
+		"defaultVersion": false,
+		"includeVersion": false,
+		"jetstarInternalGateway":true,
+		"jetstarExternalGateway":true,
+		"subscriptionTiers": ["Unlimited","Gold","Silver","Bronze","Silver_Auto-Approved","Gold_Auto-Approved","Bronze_Auto-Approved"],
+		"corsHeaders": {	
+            "Access-Control-Allow-Methods":"GET",
+            "Access-Control-Allow-Origin":"apistore-dev-dev-a878-14-ams10-nonp.cloud.random.com"
+        	}
+	}
+
+}

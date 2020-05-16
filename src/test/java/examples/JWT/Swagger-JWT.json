@@ -1,0 +1,66 @@
+{  
+    "apiConf": {
+		"subscriptionTiers": ["Test","Unlimited","Bronze","Silver","Gold","Gold_Auto-Approved"],
+
+        "domain": "test",
+        "wso2": true,
+        "defaultVersion": true,
+        "abc": "abc",
+        "includeVersion": true,
+        "corsHeaders": {
+
+            "Access-Control-Allow-Headers": "origin, content-type, accept, x-appid, x-sessionid, x-corrid,hb",
+            "Access-Control-Allow-Methods":"GET",
+            "Access-Control-Allow-Origin":"freight.random.com,batman.com",
+            "Access-Control-Allow-Credentials":"false"
+        }  
+
+   },
+   "swagger":{    
+   	"swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "JWT",
+        "description": "JWT Authenticated",
+        "x-businessOwner": {
+            "name": "Troy Lenger",
+            "email": "troy.lenger@random.com"
+        },
+        "x-technicalOwner": {
+            "name": "Troy Lenger",
+            "email": "troy.lenger@random.com"
+        }
+    },
+    "host": "demo.dev.dev.a878-02.ams10.nonp.cloud.random.com/api",
+    "basePath": "/jwt",
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "JWT",
+                "description": "JWT",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "response",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseModel"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorModel"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}

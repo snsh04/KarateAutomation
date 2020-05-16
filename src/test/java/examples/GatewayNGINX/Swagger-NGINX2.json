@@ -1,0 +1,228 @@
+{  
+   "apiConf":{ 
+    "domain": "test",
+    "wso2": true,
+    "lambda": true,
+    "backupToS3": false,
+    "includeVersion": true,
+	"defaultVersion": true,
+	    "subscriptionTiers": ["Gold", "Silver", "Bronze", "Bronze_Auto-Approved"]
+   },
+"swagger": {
+
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "Regtest_Decode",
+        "description": "Lambda Registration Test",
+        "x-businessOwner": {
+            "name": "APIGW Team",
+            "email": "sneha.shukla@random.com"
+        },
+		"x-technicalOwner": {
+            "name": "APIGW Team",
+            "email": "sneha.shukla@random.com"
+        }
+    },
+    "host": "lambda",
+    "x-lambda-arn":"ams10-a878-11-dev-demo-echo-Latest-Function-9A5EVK3LLTE5:release",
+    "basePath": "/Decode",
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+        "/test-1": {
+            "get": {
+	                "x-auth-type": "None",
+                "summary": "Echo a GET Request",
+                "description": "Echo a GET Request",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "example",
+                        "in": "query",
+                        "description": "Example Query Param",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Response"
+                    }
+                }
+            },
+            "post": {
+            	 "x-auth-type": "None",
+                "summary": "Echo a POST Request",
+                "description": "Echo a POST Request",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "example",
+                        "in": "query",
+                        "description": "Example Query Param key",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Response"
+                    }
+                }
+            }
+        },
+           "/test`1": {
+            "get": {
+                "x-auth-type": "None",
+                "summary": "Echo a GET Request",
+                "description": "Echo a GET Request",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "example",
+                        "in": "query",
+                        "description": "Example Query Param",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Response"
+                    }
+                }
+            },
+            "post": {
+            	 "x-auth-type": "None",
+                "summary": "Echo a POST Request",
+                "description": "Echo a POST Request",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "example",
+                        "in": "query",
+                        "description": "Example Query Param key",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Response"
+                    }
+                }
+            }
+        },
+        "/test2": {
+            "put": {
+            	 "x-auth-type": "None",
+                "summary": "Echo a PUT Request",
+                "description": "Echo a PUT Request",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "example",
+                        "in": "query",
+                        "description": "Example Query Param",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Response"
+                    }
+                }
+            },
+			     "patch": {
+            	 "x-auth-type": "None",
+                "summary": "Echo a Patch Request",
+                "description": "Echo a Patch Request",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "example",
+                        "in": "query",
+                        "description": "Example Query Param",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Response"
+                    }
+                }
+            },
+         
+            "delete": {
+            	 "x-auth-type": "None",
+                "summary": "Echo a DELETE Request",
+                "description": "Echo a DELETE Request",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "example",
+                        "in": "query",
+                        "description": "Example Query Param key",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Response"
+                    }
+                }
+            }
+        },
+        "/test3/{pathVar1}/{pathVar2}": {
+            "get": {
+                "description": "Echo a GET Request with path variables",
+                "summary": "Example Request with path varibale",
+                "parameters": [
+                    {
+                        "description": "Example Path Variables",
+                        "in": "path",
+                        "name": "pathVar1",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "Example Path Variables",
+                        "in": "path",
+                        "name": "pathVar2",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Response"
+                    }
+                }
+            }
+        }
+    }
+}
+
+}

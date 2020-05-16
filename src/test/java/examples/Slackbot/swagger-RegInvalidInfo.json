@@ -1,0 +1,83 @@
+{
+  "apiConf": {
+        "domain": "Testing",
+        "lambda": true,
+        "defaultVersion": true,
+        "abc": "abc",
+        "includeVersion": false,
+        "internalGateway": true,
+        "externalGateway": true,
+        "sandboxHost":"",
+        "jetstarExternalGateway":true,
+        "jetstarInternalGateway":true,
+        "corsHeaders": {
+
+            "Access-Control-Allow-Headers": "origin, content-type, accept, x-appid, x-sessionid, x-corrid,hb",
+            "Access-Control-Allow-Methods":"GET",
+            "Access-Control-Allow-Origin":"freight.random.com,batman.com",
+            "Access-Control-Allow-Credentials":false
+        },
+       "subscriptionTiers": ["Bronze","Silver","Gold","Gold_Auto-Approved"]
+
+    },
+    "swagger": {
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "Slack Integration",
+    "description": "The APIs that are being used by the backend Slack bot.",
+    "contact": {
+      "name": "Sneha Shukla",
+      "email": "sneha.shukla@random.com"
+    },
+    "x-businessOwner": {
+      "name": "Sam Purchase",
+      "email": "sam.purchase@random.com"
+    },
+    "x-technicalOwner": {
+      "name": "Sneha Shukla",
+      "email": "sneha.shukla@random.com"
+    }
+  },
+  "host": "notrequired",
+  "x-lambda-arn": "arn:aws:lambda:ap-southeast-2:196238444021:function:ams10-a878-43-dev-dev-registrationRetriev-Function-X3IP0DXRFEBH:release",
+  "basePath": "lambda-info",
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/regInfo": {
+      "get": {
+        "x-auth-type": "Application & Application User",
+        "summary": "Registration Info",
+        "description": "Provide a x-registrationId header to get the request details.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "registrationId",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Valid Response"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "default": {
+      "type": "oauth2",
+      "authorizationUrl": "https://jg-reverse-proxy.uat.dev.a878-31.ams10.nonp.cloud.random.com/authorize",
+      "flow": "implicit",
+      "scopes": {}
+    }
+  }
+}
+}

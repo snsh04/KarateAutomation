@@ -1,0 +1,252 @@
+{
+    "apiConf": {
+        
+        "domain": "/customer",
+        "wso2": true,
+        "subscriptionTiers": ["Unlimited","Gold","Bronze_Auto-Approved"],
+        "defaultVersion": true,
+        "includeVersion": true,
+        "internalGateway":true,
+        "externalGateway":true,
+        "jetstarInternalGateway": true, 
+        "jetstarExternalGateway": true
+    },
+    "swagger": {
+      "swagger": "2.0",
+      "info": {
+          "version": "V1",
+          "title": "Smoke_test",
+          "description": "Country APIn Regression Testing",
+          "x-businessOwner": {
+            "name": "regtest",
+            "email": "regtest@random.com"
+          },
+          "x-technicalOwner": {
+            "name": "regtesttech",
+            "email": "regtest@tech.com"
+          }
+      },
+      "host": "alb.uat.dev.a878-02.ams10.nonp.cloud.random.com/api",
+      "basePath": "/countrypipe",
+      "schemes": [
+          "https"
+      ],
+      "paths": {
+          "/country/countries": {
+              "get": {
+        
+                  "summary": "List of all countries",
+                  "description": "Get a list of two countries",
+                  "produces": [
+                      "application/json"
+                  ],
+             
+            
+                  "responses": {
+                      "200": {
+                          "description": "response",
+                          "schema": {
+                              "$ref": "#/definitions/ResponseModel"
+                          }
+                      },
+                      "default": {
+                          "description": "unexpected error",
+                          "schema": {
+                              "$ref": "#/definitions/ErrorModel"
+                          }
+                      }
+                  }
+              },
+              "post": {
+                
+                  "summary": "Add a new country",
+                  "description": "Create a new country",
+                  "produces": [
+                      "application/json"
+                  ],
+                  "parameters": [
+                      {
+							 "name": "example",
+                          "in": "query",
+                          "description": "Your API access key",
+                          "required": false,
+                          "x-data-threescale-name": "user_keys",
+                          "type": "string"
+                      }
+                  ],
+                  "responses": {
+                      "200": {
+                          "description": "response",
+                          "schema": {
+                              "$ref": "#/definitions/ResponseModel"
+                          }
+                      },
+                      "default": {
+                          "description": "unexpected error",
+                          "schema": {
+                              "$ref": "#/definitions/ErrorModel"
+                          }
+                      }
+                  }
+              },
+			   "put": {
+            	
+                "summary": "Echo a PUT Request",
+                "description": "Echo a PUT Request",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "example",
+                        "in": "query",
+                        "description": "Example Query Param",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Response"
+                    }
+                }
+            },
+			 "patch": {
+          
+                "summary": "Echo a PATCH Request",
+                "description": "Echo a PATCH Request",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "example",
+                        "in": "query",
+                        "description": "Example Query Param",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Response"
+                    }
+                }
+            },
+			    "delete": {
+            	 "x-auth-type": "None",
+                "summary": "Echo a DELETE Request",
+                "description": "Echo a DELETE Request",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "example",
+                        "in": "query",
+                        "description": "Example Query Param key",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Response"
+                    }
+                }
+            }
+          },
+		  
+          "/country/countries/{countryId}": {
+              "get": {
+              
+                  "summary": "Get a specific country by ID (Example: 'au')",
+                  "description": "Get details of a single country",
+                  "produces": [
+                      "application/json"
+                  ],
+                  "parameters": [
+                      {
+                          "name": "user_key",
+                          "in": "query",
+                          "description": "Your API access key",
+                          "required": false,
+                          "x-data-threescale-name": "user_keys",
+                          "type": "string"
+                      },
+                      {
+                          "name": "countryId",
+                          "in": "query",
+                          "required": true,
+                          "type": "string"
+                      }
+                  ],
+                  "responses": {
+                      "200": {
+                          "description": "response",
+                          "schema": {
+                              "$ref": "#/definitions/ResponseModel"
+                          }
+                      },
+                      "default": {
+                          "description": "unexpected error",
+                          "schema": {
+                              "$ref": "#/definitions/ErrorModel"
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "definitions": {
+          "ResponseModel": {
+              "type": "object",
+              "required": [
+                  "method",
+                  "path",
+                  "args",
+                  "headers"
+              ],
+              "properties": {
+                  "name": {
+                      "type": "string"
+                  },
+                  "capital": {
+                      "type": "string"
+                  },
+                  "altSpellings": {
+                      "type" : "array",
+                      "items" : {
+                          "type" : "string"
+                      }
+                  },
+                  "region": {
+                      "type": "string"
+                  },
+                  "subregion": {
+                      "type": "string"
+                  },
+                  "population": {
+                      "type": "integer"
+                  }
+              }
+          },
+          "ErrorModel": {
+              "type": "object",
+              "required": [
+                  "code",
+                  "message"
+              ],
+              "properties": {
+                  "code": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "message": {
+                      "type": "string"
+                  }
+              }
+          }
+      }
+  }
+}

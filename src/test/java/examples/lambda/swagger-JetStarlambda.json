@@ -1,0 +1,136 @@
+{
+  "swagger":{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "Lambda Quote Function",
+    "description": "Lambda Functions Demo",
+    "contact": {
+        "name": "contact.name",
+        "email": "contact@random.com"
+    },
+    "x-businessOwner": {
+        "name": "businessOwner.name",
+        "email": "businessOwner@random.com"
+    },
+    "x-technicalOwner": {
+        "name": "technicalOwner.name",
+        "email": "technicalOwner@random.com"
+    }
+  },
+  "host": "doesntmatter",
+  "basePath": "/lambda-JetStar",
+  "x-lambda-arn": "ams10-a878-11-dev-demo-echo-Latest-Function-9A5EVK3LLTE5:release",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/quote": {
+      "get": {
+        "description": "Lambda function that returns a random quotes",
+        "operationId": "LambdaTestFunction",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "type": "string",
+            "description": "Required. Valid value is `application/json`"
+          },
+          {
+            "name": "X-Request-Id",
+            "in": "header",
+            "type": "string",
+            "description": "The unique string identifying the request."
+          },
+          {
+            "name": "Cache-Control",
+            "in": "header",
+            "description": "This header allows the client to specify which version of member details is happy to receive. If max-age=0 is set, the server will reply with a fresh version of MemberProfile.",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK. The request has succeeded. The response body contains information of the lambda invocation response.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad Request. The request could not be understood by the server due to malformed syntax. The message body will contain more information about the error.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized. The request requires authentication or the authorization has been refused.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "404": {
+            "description": "Not Found. The provided member identifier is not valid or the status of the member is not active.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error. This error usually occurs when the system is not in stable state.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ErrorResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "boolean",
+          "description": "Indicates whether the expected result was returned"
+        },
+        "message": {
+          "type": "string",
+          "description": "Error message"
+        },
+        "details": {
+          "type": "object",
+          "description": "Details of error response",
+          "properties": {
+            "reason": {
+              "type": "string",
+              "description": "Detailed error message"
+            }
+          }
+        }
+      },
+      "example": {
+        "status": false,
+        "message": "Error message",
+        "details": {
+          "reason": "Detailed error message"
+        }
+      }
+    }
+  }
+},
+"apiConf":{
+ "name": "Lambda Quote Function",
+    "domain": "/aircraft",
+    "wso2": true,
+    "lambda":true,
+	"publish":true,
+	"defaultVersion":true,
+	"includeVersion":true,
+	"internalGateway":false,
+    "externalGateway":false,
+    "jetstarExternalGateway":true,
+	"jetstarInternalGateway":true
+}
+}

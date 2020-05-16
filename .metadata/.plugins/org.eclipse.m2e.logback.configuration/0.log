@@ -1,0 +1,453 @@
+2018-08-09 15:36:48,505 [Worker-0: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-08-09 15:36:58,896 [Worker-0: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2018-08-09 15:39:55,324 [Worker-7: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-08-09 15:40:05,670 [Worker-7: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2018-08-09 15:42:19,373 [Worker-6: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-08-09 15:42:29,642 [Worker-6: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2018-08-09 15:44:58,730 [Worker-12: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.qantas.apigateway:regression_tests_api:0.1.0-SNAPSHOT @ D:\POC\apigwtst\pom.xml.
+2018-08-09 15:44:58,730 [Worker-1: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.qantas.apigateway:regression_tests_api:0.1.0-SNAPSHOT @ D:\POC\apigwtst\pom.xml.
+2018-08-09 15:45:04,873 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-09 15:45:04,876 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-09 15:45:04,885 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-09 15:45:04,891 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-09 15:45:06,146 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar
+2018-08-09 15:45:06,257 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar
+2018-08-09 15:45:06,805 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.slf4j:slf4j-api:1.7.25
+2018-08-09 15:45:06,849 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/json/json/20180130/json-20180130-sources.jar
+2018-08-09 15:45:06,900 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/json/json/20180130/json-20180130-sources.jar
+2018-08-09 15:45:07,007 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.json:json:20180130
+2018-08-09 15:45:07,051 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25-sources.jar
+2018-08-09 15:45:07,139 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25-sources.jar
+2018-08-09 15:45:07,307 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.slf4j:slf4j-simple:1.7.25
+2018-08-09 15:45:07,357 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/serenity-bdd/serenity-core/1.8.1/serenity-core-1.8.1-sources.jar
+2018-08-09 15:45:07,559 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2018-08-09 15:45:08,298 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/serenity-bdd/serenity-core/1.8.1/serenity-core-1.8.1-sources.jar
+2018-08-09 15:45:09,312 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.serenity-bdd:serenity-core:1.8.1
+2018-08-09 15:45:09,365 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.qantas.apigateway:regression_tests_api:0.1.0-SNAPSHOT @ D:\POC\apigwtst\pom.xml.
+2018-08-09 15:45:09,373 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/guava/guava/23.0/guava-23.0-sources.jar
+2018-08-09 15:45:10,225 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/guava/guava/23.0/guava-23.0-sources.jar
+2018-08-09 15:45:10,542 [Worker-5: Download sources and javadoc] WARN  o.e.a.i.i.DefaultRepositoryEventDispatcher - Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+2018-08-09 15:45:10,546 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.guava:guava:23.0
+2018-08-09 15:45:11,513 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9-sources.jar
+2018-08-09 15:45:11,628 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/thirdparty/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9-sources.jar
+2018-08-09 15:45:11,848 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/internal/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9-sources.jar
+2018-08-09 15:45:14,603 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Regression Tests API/src/main/java
+2018-08-09 15:45:14,604 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Regression Tests API/src/test/java
+2018-08-09 15:45:14,605 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Regression Tests API/src/test/resources
+2018-08-09 15:45:15,671 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.qantas.apigateway:regression_tests_api:0.1.0-SNAPSHOT @ D:\POC\apigwtst\pom.xml.
+2018-08-09 15:45:17,608 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 10 sec
+2018-08-09 15:45:21,506 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-09 15:45:21,507 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-09 15:45:21,512 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-09 15:45:21,517 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-09 15:50:12,276 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://oss.sonatype.org/content/repositories/snapshots/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9-sources.jar
+2018-08-09 15:51:52,469 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9-sources.jar
+2018-08-09 15:51:52,504 [Worker-5: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for com.google.code.findbugs:jsr305:1.3.9
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.code.findbugs:jsr305:jar:sources:1.3.9
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776) ~[org.eclipse.m2e.core_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1) ~[org.eclipse.m2e.core_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) [org.eclipse.m2e.core_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) [org.eclipse.m2e.core_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) [org.eclipse.m2e.core_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743) [org.eclipse.m2e.core_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720) [org.eclipse.m2e.core_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:279) [org.eclipse.m2e.jdt_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:254) [org.eclipse.m2e.jdt_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:221) [org.eclipse.m2e.jdt_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161) [org.eclipse.m2e.jdt_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:137) [org.eclipse.m2e.jdt_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:1) [org.eclipse.m2e.jdt_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) [org.eclipse.m2e.core_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) [org.eclipse.m2e.core_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) [org.eclipse.m2e.core_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1355) [org.eclipse.m2e.core_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:135) [org.eclipse.m2e.jdt_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60) [org.eclipse.core.jobs_3.10.0.v20180427-1454.jar:na]
+2018-08-09 15:51:52,888 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18-sources.jar
+2018-08-09 15:51:52,937 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18-sources.jar
+2018-08-09 15:51:53,098 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.errorprone:error_prone_annotations:2.0.18
+2018-08-09 15:51:53,135 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1-sources.jar
+2018-08-09 15:51:53,171 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1-sources.jar
+2018-08-09 15:51:53,248 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.j2objc:j2objc-annotations:1.1
+2018-08-09 15:51:53,269 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14-sources.jar
+2018-08-09 15:51:53,294 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14-sources.jar
+2018-08-09 15:51:53,363 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.codehaus.mojo:animal-sniffer-annotations:1.14
+2018-08-09 15:51:53,400 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/inject/guice/4.1.0/guice-4.1.0-sources.jar
+2018-08-09 15:51:53,489 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/inject/guice/4.1.0/guice-4.1.0-sources.jar
+2018-08-09 15:51:53,571 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.inject:guice:4.1.0
+2018-08-09 15:51:53,601 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/javax/inject/javax.inject/1/javax.inject-1-sources.jar
+2018-08-09 15:51:53,628 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/javax/inject/javax.inject/1/javax.inject-1-sources.jar
+2018-08-09 15:51:53,763 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for javax.inject:javax.inject:1
+2018-08-09 15:51:53,803 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar
+2018-08-09 15:51:53,834 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar
+2018-08-09 15:51:54,021 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for aopalliance:aopalliance:1.0
+2018-08-09 15:51:54,061 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/cglib/cglib/3.2.5/cglib-3.2.5-sources.jar
+2018-08-09 15:51:54,166 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/cglib/cglib/3.2.5/cglib-3.2.5-sources.jar
+2018-08-09 15:51:54,345 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for cglib:cglib:3.2.5
+2018-08-09 15:51:54,393 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/apache/ant/ant/1.9.6/ant-1.9.6-sources.jar
+2018-08-09 15:51:54,835 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/apache/ant/ant/1.9.6/ant-1.9.6-sources.jar
+2018-08-09 15:51:54,919 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.ant:ant:1.9.6
+2018-08-09 15:51:54,960 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6-sources.jar
+2018-08-09 15:51:55,069 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6-sources.jar
+2018-08-09 15:51:55,197 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.ant:ant-launcher:1.9.6
+2018-08-09 15:51:55,249 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/ow2/asm/asm/5.0.3/asm-5.0.3-sources.jar
+2018-08-09 15:51:55,566 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/ow2/asm/asm/5.0.3/asm-5.0.3-sources.jar
+2018-08-09 15:51:55,644 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.ow2.asm:asm:5.0.3
+2018-08-09 15:51:55,688 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-codec/commons-codec/1.10/commons-codec-1.10-sources.jar
+2018-08-09 15:51:55,785 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-codec/commons-codec/1.10/commons-codec-1.10-sources.jar
+2018-08-09 15:51:55,910 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-codec:commons-codec:1.10
+2018-08-09 15:51:55,957 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/objenesis/objenesis/2.6/objenesis-2.6-sources.jar
+2018-08-09 15:51:55,987 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/objenesis/objenesis/2.6/objenesis-2.6-sources.jar
+2018-08-09 15:51:56,054 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.objenesis:objenesis:2.6
+2018-08-09 15:51:56,104 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01-sources.jar
+2018-08-09 15:51:56,271 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01-sources.jar
+2018-08-09 15:51:56,439 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for xml-apis:xml-apis:1.4.01
+2018-08-09 15:51:56,477 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/cucumber/cucumber-core/2.1.0/cucumber-core-2.1.0-sources.jar
+2018-08-09 15:51:56,527 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/cucumber/cucumber-core/2.1.0/cucumber-core-2.1.0-sources.jar
+2018-08-09 15:51:56,734 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.cucumber:cucumber-core:2.1.0
+2018-08-09 15:51:56,757 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/cucumber/cucumber-jvm-deps/1.0.6/cucumber-jvm-deps-1.0.6-sources.jar
+2018-08-09 15:51:56,821 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/cucumber/cucumber-jvm-deps/1.0.6/cucumber-jvm-deps-1.0.6-sources.jar
+2018-08-09 15:51:56,895 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.cucumber:cucumber-jvm-deps:1.0.6
+2018-08-09 15:51:56,926 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/cucumber/gherkin/5.0.0/gherkin-5.0.0-sources.jar
+2018-08-09 15:51:56,959 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/cucumber/gherkin/5.0.0/gherkin-5.0.0-sources.jar
+2018-08-09 15:51:57,044 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.cucumber:gherkin:5.0.0
+2018-08-09 15:51:57,068 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/cucumber/tag-expressions/1.0.1/tag-expressions-1.0.1-sources.jar
+2018-08-09 15:51:57,091 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/cucumber/tag-expressions/1.0.1/tag-expressions-1.0.1-sources.jar
+2018-08-09 15:51:57,161 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.cucumber:tag-expressions:1.0.1
+2018-08-09 15:51:57,206 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar
+2018-08-09 15:51:57,243 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar
+2018-08-09 15:51:57,383 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-logging:commons-logging:1.2
+2018-08-09 15:51:57,426 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19-sources.jar
+2018-08-09 15:51:57,620 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19-sources.jar
+2018-08-09 15:51:57,692 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mockito:mockito-core:1.10.19
+2018-08-09 15:51:57,734 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/bytebuddy/byte-buddy/1.7.5/byte-buddy-1.7.5-sources.jar
+2018-08-09 15:51:58,104 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/bytebuddy/byte-buddy/1.7.5/byte-buddy-1.7.5-sources.jar
+2018-08-09 15:51:58,203 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.bytebuddy:byte-buddy:1.7.5
+2018-08-09 15:51:58,250 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/vavr/vavr/0.9.0/vavr-0.9.0-sources.jar
+2018-08-09 15:51:58,341 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/vavr/vavr/0.9.0/vavr-0.9.0-sources.jar
+2018-08-09 15:51:58,457 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.vavr:vavr:0.9.0
+2018-08-09 15:51:58,501 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/vavr/vavr-match/0.9.0/vavr-match-0.9.0-sources.jar
+2018-08-09 15:51:58,526 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/vavr/vavr-match/0.9.0/vavr-match-0.9.0-sources.jar
+2018-08-09 15:51:58,607 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.vavr:vavr-match:0.9.0
+2018-08-09 15:51:58,646 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/serenity-bdd/serenity-report-resources/1.8.1/serenity-report-resources-1.8.1-sources.jar
+2018-08-09 15:51:59,369 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/serenity-bdd/serenity-report-resources/1.8.1/serenity-report-resources-1.8.1-sources.jar
+2018-08-09 15:51:59,430 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.serenity-bdd:serenity-report-resources:1.8.1
+2018-08-09 15:51:59,468 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/code/gson/gson/2.8.0/gson-2.8.0-sources.jar
+2018-08-09 15:51:59,516 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/code/gson/gson/2.8.0/gson-2.8.0-sources.jar
+2018-08-09 15:51:59,584 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.code.gson:gson:2.8.0
+2018-08-09 15:51:59,633 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-io/commons-io/2.5/commons-io-2.5-sources.jar
+2018-08-09 15:51:59,715 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-io/commons-io/2.5/commons-io-2.5-sources.jar
+2018-08-09 15:51:59,829 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-io:commons-io:2.5
+2018-08-09 15:51:59,864 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/opera/operadriver/1.5/operadriver-1.5-sources.jar
+2018-08-09 15:52:00,049 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/opera/operadriver/1.5/operadriver-1.5-sources.jar
+2018-08-09 15:52:00,124 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.opera:operadriver:1.5
+2018-08-09 15:52:00,144 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/opera/operalaunchers/1.1/operalaunchers-1.1-sources.jar
+2018-08-09 15:52:00,168 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/opera/operalaunchers/1.1/operalaunchers-1.1-sources.jar
+2018-08-09 15:52:00,230 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.opera:operalaunchers:1.1
+2018-08-09 15:52:00,288 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/protobuf/protobuf-java/2.4.1/protobuf-java-2.4.1-sources.jar
+2018-08-09 15:52:00,350 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/google/protobuf/protobuf-java/2.4.1/protobuf-java-2.4.1-sources.jar
+2018-08-09 15:52:00,416 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.protobuf:protobuf-java:2.4.1
+2018-08-09 15:52:00,458 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3-sources.jar
+2018-08-09 15:52:00,552 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3-sources.jar
+2018-08-09 15:52:00,712 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-jxpath:commons-jxpath:1.3
+2018-08-09 15:52:00,754 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/ini4j/ini4j/0.5.2/ini4j-0.5.2-sources.jar
+2018-08-09 15:52:00,788 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/ini4j/ini4j/0.5.2/ini4j-0.5.2-sources.jar
+2018-08-09 15:52:00,865 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.ini4j:ini4j:0.5.2
+2018-08-09 15:52:00,898 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/seleniumhq/selenium/selenium-server/3.7.1/selenium-server-3.7.1-sources.jar
+2018-08-09 15:52:01,022 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/seleniumhq/selenium/selenium-server/3.7.1/selenium-server-3.7.1-sources.jar
+2018-08-09 15:52:01,096 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:selenium-server:3.7.1
+2018-08-09 15:52:01,128 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/beust/jcommander/1.48/jcommander-1.48-sources.jar
+2018-08-09 15:52:01,159 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/beust/jcommander/1.48/jcommander-1.48-sources.jar
+2018-08-09 15:52:01,224 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.beust:jcommander:1.48
+2018-08-09 15:52:01,263 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/w3c/css/sac/1.3/sac-1.3-sources.jar
+2018-08-09 15:52:01,316 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/w3c/css/sac/1.3/sac-1.3-sources.jar
+2018-08-09 15:52:01,506 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.w3c.css:sac:1.3
+2018-08-09 15:52:01,544 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/sourceforge/cssparser/cssparser/0.9.23/cssparser-0.9.23-sources.jar
+2018-08-09 15:52:01,621 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/sourceforge/cssparser/cssparser/0.9.23/cssparser-0.9.23-sources.jar
+2018-08-09 15:52:01,701 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.sourceforge.cssparser:cssparser:0.9.23
+2018-08-09 15:52:01,786 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/sourceforge/htmlunit/htmlunit-core-js/2.27/htmlunit-core-js-2.27-sources.jar
+2018-08-09 15:52:01,962 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/sourceforge/htmlunit/htmlunit-core-js/2.27/htmlunit-core-js-2.27-sources.jar
+2018-08-09 15:52:02,053 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.sourceforge.htmlunit:htmlunit-core-js:2.27
+2018-08-09 15:52:02,100 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/sourceforge/htmlunit/neko-htmlunit/2.27/neko-htmlunit-2.27-sources.jar
+2018-08-09 15:52:02,143 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/sourceforge/htmlunit/neko-htmlunit/2.27/neko-htmlunit-2.27-sources.jar
+2018-08-09 15:52:02,225 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.sourceforge.htmlunit:neko-htmlunit:2.27
+2018-08-09 15:52:02,253 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0-sources.jar
+2018-08-09 15:52:02,280 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0-sources.jar
+2018-08-09 15:52:02,414 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.jcip:jcip-annotations:1.0
+2018-08-09 15:52:02,431 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/seleniumhq/selenium/jetty-repacked/9.4.5.v20170502/jetty-repacked-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:02,459 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/seleniumhq/selenium/jetty-repacked/9.4.5.v20170502/jetty-repacked-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:02,569 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:jetty-repacked:9.4.5.v20170502
+2018-08-09 15:52:02,610 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/jetty-client/9.4.5.v20170502/jetty-client-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:02,665 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/jetty-client/9.4.5.v20170502/jetty-client-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:02,757 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.eclipse.jetty:jetty-client:9.4.5.v20170502
+2018-08-09 15:52:02,796 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/jetty-http/9.4.5.v20170502/jetty-http-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:02,835 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/jetty-http/9.4.5.v20170502/jetty-http-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:02,893 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.eclipse.jetty:jetty-http:9.4.5.v20170502
+2018-08-09 15:52:02,936 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar
+2018-08-09 15:52:03,004 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar
+2018-08-09 15:52:03,088 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for javax.servlet:javax.servlet-api:3.1.0
+2018-08-09 15:52:03,128 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/websocket/websocket-api/9.4.5.v20170502/websocket-api-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:03,161 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/websocket/websocket-api/9.4.5.v20170502/websocket-api-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:03,229 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.eclipse.jetty.websocket:websocket-api:9.4.5.v20170502
+2018-08-09 15:52:03,282 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/websocket/websocket-client/9.4.5.v20170502/websocket-client-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:03,341 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/websocket/websocket-client/9.4.5.v20170502/websocket-client-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:03,435 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.eclipse.jetty.websocket:websocket-client:9.4.5.v20170502
+2018-08-09 15:52:03,478 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/websocket/websocket-common/9.4.5.v20170502/websocket-common-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:03,558 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/websocket/websocket-common/9.4.5.v20170502/websocket-common-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:03,696 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.eclipse.jetty.websocket:websocket-common:9.4.5.v20170502
+2018-08-09 15:52:03,740 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0-sources.jar
+2018-08-09 15:52:04,183 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0-sources.jar
+2018-08-09 15:52:04,346 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for xerces:xercesImpl:2.11.0
+2018-08-09 15:52:04,395 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/yaml/snakeyaml/1.15/snakeyaml-1.15-sources.jar
+2018-08-09 15:52:04,458 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/yaml/snakeyaml/1.15/snakeyaml-1.15-sources.jar
+2018-08-09 15:52:04,558 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.yaml:snakeyaml:1.15
+2018-08-09 15:52:04,590 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/codeborne/phantomjsdriver/1.4.3/phantomjsdriver-1.4.3-sources.jar
+2018-08-09 15:52:04,613 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/com/codeborne/phantomjsdriver/1.4.3/phantomjsdriver-1.4.3-sources.jar
+2018-08-09 15:52:04,684 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.codeborne:phantomjsdriver:1.4.3
+2018-08-09 15:52:04,731 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/jetty-util/9.4.5.v20170502/jetty-util-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:04,819 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/jetty-util/9.4.5.v20170502/jetty-util-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:04,892 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.eclipse.jetty:jetty-util:9.4.5.v20170502
+2018-08-09 15:52:04,939 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/jetty-io/9.4.5.v20170502/jetty-io-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:04,979 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/eclipse/jetty/jetty-io/9.4.5.v20170502/jetty-io-9.4.5.v20170502-sources.jar
+2018-08-09 15:52:05,064 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.eclipse.jetty:jetty-io:9.4.5.v20170502
+2018-08-09 15:52:05,105 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/seleniumhq/selenium/htmlunit-driver/2.27/htmlunit-driver-2.27-sources.jar
+2018-08-09 15:52:05,172 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/seleniumhq/selenium/htmlunit-driver/2.27/htmlunit-driver-2.27-sources.jar
+2018-08-09 15:52:05,235 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.seleniumhq.selenium:htmlunit-driver:2.27
+2018-08-09 15:52:05,275 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/appium/java-client/5.0.4/java-client-5.0.4-sources.jar
+2018-08-09 15:52:05,342 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/io/appium/java-client/5.0.4/java-client-5.0.4-sources.jar
+2018-08-09 15:52:05,413 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.appium:java-client:5.0.4
+2018-08-09 15:52:05,470 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-validator/commons-validator/1.6/commons-validator-1.6-sources.jar
+2018-08-09 15:52:05,534 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-validator/commons-validator/1.6/commons-validator-1.6-sources.jar
+2018-08-09 15:52:05,659 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-validator:commons-validator:1.6
+2018-08-09 15:52:05,705 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2-sources.jar
+2018-08-09 15:52:05,810 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2-sources.jar
+2018-08-09 15:52:06,019 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-beanutils:commons-beanutils:1.9.2
+2018-08-09 15:52:06,068 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1-sources.jar
+2018-08-09 15:52:06,146 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1-sources.jar
+2018-08-09 15:52:06,274 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-digester:commons-digester:1.8.1
+2018-08-09 15:52:06,334 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-context/5.0.0.RELEASE/spring-context-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:06,583 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-context/5.0.0.RELEASE/spring-context-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:06,678 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-context:5.0.0.RELEASE
+2018-08-09 15:52:06,714 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-aop/5.0.0.RELEASE/spring-aop-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:06,805 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-aop/5.0.0.RELEASE/spring-aop-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:06,867 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-aop:5.0.0.RELEASE
+2018-08-09 15:52:06,903 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-beans/5.0.0.RELEASE/spring-beans-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:07,081 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-beans/5.0.0.RELEASE/spring-beans-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:07,173 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-beans:5.0.0.RELEASE
+2018-08-09 15:52:07,218 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-core/5.0.0.RELEASE/spring-core-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:07,402 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-core/5.0.0.RELEASE/spring-core-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:07,480 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-core:5.0.0.RELEASE
+2018-08-09 15:52:07,525 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-jcl/5.0.0.RELEASE/spring-jcl-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:07,551 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-jcl/5.0.0.RELEASE/spring-jcl-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:07,631 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-jcl:5.0.0.RELEASE
+2018-08-09 15:52:07,668 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-expression/5.0.0.RELEASE/spring-expression-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:07,729 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/springframework/spring-expression/5.0.0.RELEASE/spring-expression-5.0.0.RELEASE-sources.jar
+2018-08-09 15:52:07,856 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-expression:5.0.0.RELEASE
+2018-08-09 15:52:07,898 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/aspectj/aspectjweaver/1.8.11/aspectjweaver-1.8.11-sources.jar
+2018-08-09 15:52:08,261 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/aspectj/aspectjweaver/1.8.11/aspectjweaver-1.8.11-sources.jar
+2018-08-09 15:52:08,372 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.aspectj:aspectjweaver:1.8.11
+2018-08-09 15:52:08,426 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/openpnp/opencv/3.2.0-1/opencv-3.2.0-1-sources.jar
+2018-08-09 15:52:22,006 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/openpnp/opencv/3.2.0-1/opencv-3.2.0-1-sources.jar
+2018-08-09 15:52:22,072 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.openpnp:opencv:3.2.0-1
+2018-08-09 15:52:22,116 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/codehaus/groovy/groovy/2.4.12/groovy-2.4.12-sources.jar
+2018-08-09 15:52:22,581 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/org/codehaus/groovy/groovy/2.4.12/groovy-2.4.12-sources.jar
+2018-08-09 15:52:22,660 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.codehaus.groovy:groovy:2.4.12
+2018-08-09 15:52:22,699 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/sf/opencsv/opencsv/2.0/opencsv-2.0-sources.jar
+2018-08-09 15:52:22,725 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/net/sf/opencsv/opencsv/2.0/opencsv-2.0-sources.jar
+2018-08-09 15:52:22,796 [Worker-5: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.sf.opencsv:opencsv:2.0
+2018-08-09 15:52:23,567 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/central/commons-beanutils/commons-beanutils-core/1.8.3/commons-beanutils-core-1.8.3-sources.jar
+2018-08-09 15:52:23,656 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/thirdparty/commons-beanutils/commons-beanutils-core/1.8.3/commons-beanutils-core-1.8.3-sources.jar
+2018-08-09 15:52:23,698 [Worker-5: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://nexus.qcpaws.qantas.com.au/nexus/content/repositories/internal/commons-beanutils/commons-beanutils-core/1.8.3/commons-beanutils-core-1.8.3-sources.jar
+2018-08-09 15:52:49,026 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/intuit/karate/karate-archetype/0.8.0/karate-archetype-0.8.0.pom
+2018-08-09 15:52:49,071 [ModalContext] ERROR o.e.m.c.u.i.w.MavenProjectWizardArchetypePage - Can't resolve Archetype com.intuit.karate:karate-archetype:0.8.0
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.intuit.karate:karate-archetype:pom:0.8.0
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$17.run(MavenProjectWizardArchetypePage.java:842) ~[org.eclipse.m2e.core.ui_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119) [org.eclipse.jface_3.14.0.v20180423-0714.jar:na]
+2018-08-09 15:57:31,531 [Worker-4: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-08-09 15:57:41,853 [Worker-4: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2018-08-09 15:57:47,753 [Worker-3: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-09 15:57:47,755 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-09 15:57:47,759 [Worker-3: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-09 15:57:47,775 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-09 16:00:53,387 [ModalContext] ERROR o.e.m.c.u.i.w.MavenProjectWizardArchetypePage - Can't resolve Archetype com.intuit.karate:karate-archetype:0.8.0
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.intuit.karate:karate-archetype:pom:0.8.0
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$17.run(MavenProjectWizardArchetypePage.java:842) ~[org.eclipse.m2e.core.ui_1.9.0.20180606-2036.jar:na]
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119) [org.eclipse.jface_3.14.0.v20180423-0714.jar:na]
+2018-08-09 16:02:00,288 [Worker-2: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-08-09 16:02:10,564 [Worker-2: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2018-08-09 16:02:12,578 [Worker-7: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-09 16:02:12,581 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-09 16:02:12,586 [Worker-7: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-09 16:02:12,593 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-10 11:29:51,236 [Worker-4: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-08-10 11:30:07,597 [Worker-2: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-10 11:30:07,600 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-10 11:30:07,603 [Worker-2: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-10 11:30:07,614 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-10 11:31:58,203 [Worker-0: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-08-10 11:32:10,972 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-10 11:32:10,975 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-10 11:32:10,977 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-10 11:32:10,987 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-12 19:47:09,768 [Worker-1: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-08-12 19:47:28,123 [Worker-8: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-12 19:47:28,126 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-12 19:47:28,130 [Worker-8: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-12 19:47:28,143 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-12 19:50:04,071 [Worker-9: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.initial.karate:karateTest:0.0.1-SNAPSHOT @ D:\POC\Store\karateTest\pom.xml.
+2018-08-12 19:50:05,240 [Worker-4: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.initial.karate:karateTest:0.0.1-SNAPSHOT @ D:\POC\Store\karateTest\pom.xml.
+2018-08-12 19:51:36,514 [Worker-18: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2018-08-12 19:51:36,747 [Worker-18: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.initial.karate:karateTest:0.0.1-SNAPSHOT @ D:\POC\Store\karateTest\pom.xml.
+2018-08-12 19:51:36,882 [Worker-18: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2018-08-12 20:09:10,837 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2018-08-12 20:09:17,491 [Worker-9: Launching karateTest] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\POC\Store\karateTest
+2018-08-12 20:09:17,491 [Worker-9: Launching karateTest] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2018-08-12 20:51:54,460 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-12 20:51:54,461 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\Store\karateTest\src\main\resources
+2018-08-12 20:51:54,463 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-12 20:51:54,464 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-08-13 10:02:52,982 [Worker-0: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-08-13 10:03:07,706 [Worker-3: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 10:03:07,710 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 10:03:07,724 [Worker-3: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 10:03:07,735 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 10:03:11,748 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-13 10:03:11,748 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\Store\karateTest\src\main\resources
+2018-08-13 10:03:11,751 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-13 10:03:11,752 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-08-13 21:37:02,360 [Worker-1: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-08-13 21:38:02,522 [Worker-3: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 21:38:02,526 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 21:38:02,534 [Worker-3: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 21:38:02,545 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 21:53:54,286 [Worker-13: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 21:53:54,292 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 21:53:54,294 [Worker-13: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 21:53:54,407 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 21:54:44,593 [Worker-13: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 21:54:44,595 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 21:54:44,597 [Worker-13: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 21:54:44,611 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:00:03,068 [Worker-20: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:00:03,070 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:00:03,072 [Worker-20: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:00:03,079 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:00:23,309 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:00:23,311 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:00:23,313 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:00:23,315 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-13 22:11:37,962 [Worker-19: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:11:37,963 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:11:37,965 [Worker-19: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:11:37,972 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:13:13,117 [Worker-13: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:13:13,120 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:13:13,123 [Worker-13: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:13:13,129 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:13:32,764 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:13:32,765 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:13:32,768 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:13:32,774 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:13:52,636 [Worker-22: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:13:52,638 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:13:52,641 [Worker-22: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:13:52,646 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:14:12,179 [Worker-23: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:14:12,182 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:14:12,184 [Worker-23: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:14:12,188 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:14:32,953 [Worker-21: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:14:32,956 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:14:32,959 [Worker-21: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:14:32,963 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:14:52,600 [Worker-21: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:14:52,603 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:14:52,604 [Worker-21: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:14:52,608 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:15:13,159 [Worker-21: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:15:13,160 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:15:13,161 [Worker-21: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:15:13,165 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:15:32,809 [Worker-13: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:15:32,810 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:15:32,812 [Worker-13: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:15:32,816 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:17:47,495 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:17:47,496 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:17:47,498 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:17:47,503 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:18:07,561 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:18:07,565 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:18:07,573 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:18:07,578 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:38:02,489 [Worker-27: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:38:02,490 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:38:02,492 [Worker-27: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:38:02,494 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-13 22:38:05,041 [Worker-28: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:38:05,043 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:38:05,044 [Worker-28: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:38:05,051 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:43:54,270 [Worker-13: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:43:54,272 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:43:54,275 [Worker-13: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:43:54,282 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:48:36,280 [Worker-28: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:48:36,282 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:48:36,283 [Worker-28: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:48:36,288 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 22:48:55,849 [Worker-19: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:48:55,853 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 22:48:55,855 [Worker-19: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 22:48:55,860 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 23:09:45,074 [Worker-28: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:09:45,077 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 23:09:45,081 [Worker-28: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:09:45,087 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 23:10:13,793 [Worker-33: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:10:13,795 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 23:10:13,796 [Worker-33: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:10:13,801 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 23:11:57,293 [Worker-33: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:11:57,295 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 23:11:57,299 [Worker-33: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:11:57,304 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 23:12:17,030 [Worker-33: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:12:17,034 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 23:12:17,036 [Worker-33: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:12:17,043 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 23:15:54,849 [Worker-33: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:15:54,852 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 23:15:54,854 [Worker-33: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:15:54,861 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 23:18:11,026 [Worker-33: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:18:11,027 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 23:18:11,029 [Worker-33: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:18:11,032 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 23:18:30,761 [Worker-35: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:18:30,762 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 23:18:30,764 [Worker-35: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:18:30,768 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources
+2018-08-13 23:21:18,965 [Worker-28: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:21:18,966 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-08-13 23:21:18,967 [Worker-28: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-13 23:21:18,969 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-09-02 12:53:30,115 [Worker-8: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-09-02 12:53:45,773 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-02 12:53:45,775 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\POC\apigwtst\src\main\resources
+2018-09-02 12:53:45,778 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-02 12:53:45,788 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 32 resources

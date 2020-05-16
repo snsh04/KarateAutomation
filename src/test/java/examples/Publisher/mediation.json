@@ -1,0 +1,5 @@
+{
+   "name": "custom_header_fault",
+   "type": "fault",
+   "config": "<sequence xmlns=\"http://ws.apache.org/ns/synapse\" name=\"custom_header_fault\">\n    <property name=\"CustomHeader\" scope=\"transport\" value=\"example\"/>\n<\/sequence>\n"
+}

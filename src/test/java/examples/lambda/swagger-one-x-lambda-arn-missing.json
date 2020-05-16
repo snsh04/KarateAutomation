@@ -1,0 +1,116 @@
+{
+    "swagger": {
+        "swagger": "2.0",
+        "info": {
+            "version": "v1",
+            "title": "REGTEST_Lambda",
+            "description": "Lambda API Regression Testing",
+             "contact": {
+        "name": "contact.name",
+        "email": "contact@random.com"
+    },
+    "x-businessOwner": {
+        "name": "businessOwner.name",
+        "email": "businessOwner@random.com"
+    },
+    "x-technicalOwner": {
+        "name": "technicalOwner.name",
+        "email": "technicalOwner@random.com"
+    }
+        },
+        "host": "doesntmatter",
+        "basePath": "/regtest-lambda",
+        "schemes": ["http"],
+        "paths": {
+            "/quote": {
+                "get": {
+                  "x-lambda-arn": "ams10-a878-11-dev-demo-echo-Latest-Function-9A5EVK3LLTE5:release",
+                    "description":
+                        "Lambda function that returns a random quote",
+                    "operationId": "LambdaTestFunction",
+                    "produces": ["application/json"],
+                    "parameters": [
+                        {
+                            "name": "Content-Type",
+                            "in": "header",
+                            "type": "string",
+                            "description":
+                                "Required. Valid value is `application/json`"
+                        },
+                        {
+                            "name": "X-Request-Id",
+                            "in": "header",
+                            "type": "string",
+                            "description":
+                                "The unique string identifying the request."
+                        },
+                        {
+                            "name": "Cache-Control",
+                            "in": "header",
+                            "description":
+                                "This header allows the client to specify which version of member details is happy to receive. If max-age=0 is set, the server will reply with a fresh version of MemberProfile.",
+                            "type": "string"
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description":
+                                "OK. The request has succeeded. The response body contains information of the lambda invocation response.",
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "post": {
+                    "description":
+                        "Lambda function that returns a random quote",
+                    "operationId": "LambdaTestFunction",
+                    "produces": ["application/json"],
+                    "parameters": [
+                        {
+                            "name": "Content-Type",
+                            "in": "header",
+                            "type": "string",
+                            "description":
+                                "Required. Valid value is `application/json`"
+                        },
+                        {
+                            "name": "X-Request-Id",
+                            "in": "header",
+                            "type": "string",
+                            "description":
+                                "The unique string identifying the request."
+                        },
+                        {
+                            "name": "Cache-Control",
+                            "in": "header",
+                            "description":
+                                "This header allows the client to specify which version of member details is happy to receive. If max-age=0 is set, the server will reply with a fresh version of MemberProfile.",
+                            "type": "string"
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description":
+                                "OK. The request has succeeded. The response body contains information of the lambda invocation response.",
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "apiConf": {
+        "name": "REGTEST_Lambda",
+        "domain": "/test",
+        "wso2": true,
+        "lambda": true,
+        "publish": true,
+        "includeVersion":false,
+    "jetstarExternalGateway":true,
+	"jetstarInternalGateway":true
+    }
+}

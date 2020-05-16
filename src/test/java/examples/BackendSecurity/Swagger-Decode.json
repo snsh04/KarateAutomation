@@ -1,0 +1,64 @@
+{
+    "name": "Regtest_Decode",
+    "description": "Lambda Registration Test",
+    "context": "/test/Decode",
+    "version": "v1",
+    "provider": "admin",
+    "apiDefinition": "{\"swagger\":\"2.0\",\"info\":{\"version\":\"v1\",\"title\":\"Regtest_Decode\",\"description\":\"Lambda Registration Test\",\"x-businessOwner\":{\"name\":\"APIGW Team\",\"email\":\"troy.lenger@random.com\"}},\"host\":\"apiawsps-dev-dev-a878-19-ams10-nonp.cloud.random.com\",\"x-lambda-arn\":\"arn:aws:lambda:ap-southeast-2:196238444021:function:ams10-a878-11-dev-demo-echo-Latest-Function-R3SH6EQ54CAM:release\",\"basePath\":\"/Decode\",\"schemes\":[\"https\"],\"paths\":{\"/test1\":{\"get\":{\"x-auth-type\":\"None\",\"summary\":\"Echo a GET Request\",\"description\":\"Echo a GET Request\",\"produces\":[\"application/json\"],\"parameters\":[{\"name\":\"example\",\"in\":\"query\",\"description\":\"Example Query Param\",\"required\":false,\"type\":\"string\"}],\"responses\":{\"200\":{\"description\":\"Valid Response\"}}},\"post\":{\"x-auth-type\":\"None\",\"summary\":\"Echo a POST Request\",\"description\":\"Echo a POST Request\",\"produces\":[\"application/json\"],\"parameters\":[{\"name\":\"example\",\"in\":\"query\",\"description\":\"Example Query Param key\",\"required\":false,\"type\":\"string\"}],\"responses\":{\"200\":{\"description\":\"Valid Response\"}}}},\"/test2\":{\"put\":{\"x-auth-type\":\"None\",\"summary\":\"Echo a PUT Request\",\"description\":\"Echo a PUT Request\",\"produces\":[\"application/json\"],\"parameters\":[{\"name\":\"example\",\"in\":\"query\",\"description\":\"Example Query Param\",\"required\":false,\"type\":\"string\"}],\"responses\":{\"200\":{\"description\":\"Valid Response\"}}},\"delete\":{\"x-auth-type\":\"None\",\"summary\":\"Echo a DELETE Request\",\"description\":\"Echo a DELETE Request\",\"produces\":[\"application/json\"],\"parameters\":[{\"name\":\"example\",\"in\":\"query\",\"description\":\"Example Query Param key\",\"required\":false,\"type\":\"string\"}],\"responses\":{\"200\":{\"description\":\"Valid Response\"}}}},\"/test3/{pathVar1}/{pathVar2}\":{\"get\":{\"description\":\"Echo a GET Request with path variables\",\"summary\":\"Example Request with path varibale\",\"parameters\":[{\"description\":\"Example Path Variables\",\"in\":\"path\",\"name\":\"pathVar1\",\"required\":true,\"type\":\"string\"},{\"description\":\"Example Path Variables\",\"in\":\"path\",\"name\":\"pathVar2\",\"required\":true,\"type\":\"string\"}],\"produces\":[\"application/json\"],\"responses\":{\"200\":{\"description\":\"Valid Response\"}}}}}}",
+    "wsdlUri": null,
+    "status": "PUBLISHED",
+    "responseCaching": "Disabled",
+    "cacheTimeout": 300,
+    "destinationStatsEnabled": null,
+    "isDefaultVersion": false,
+    "type": "HTTP",
+    "transport": [
+        "https"
+    ],
+    "tags": [
+        "test",
+        "Decode"
+    ],
+    "tiers": [
+        "Bronze",
+        "Gold",
+        "Silver",
+        "Bronze_Auto-Approved"
+    ],
+    "maxTps": null,
+    "thumbnailUri": null,
+    "visibility": "PUBLIC",
+    "visibleRoles": [],
+    "accessControl": "NONE",
+    "accessControlRoles": [],
+    "visibleTenants": [],
+    "endpointConfig": "{\"production_endpoints\":{\"url\":\"https://apiawsps-dev-dev-a878-19-ams10-nonp.cloud.random.com/test/Decode/v1\",\"config\":null},\"sandbox_endpoints\":{\"url\":\"https://apiawsps-dev-dev-a878-19-ams10-nonp.cloud.random.com/test/Decode/v1\",\"config\":null},\"endpoint_type\":\"http\"}",
+        "endpointSecurity": {
+        "username": "regtest",
+        "type": "basic",
+        "password": "secretshhh"
+    },
+    "gatewayEnvironments": "External Gateway,Internal Gateway",
+    "sequences": [],
+    "subscriptionAvailability": null,
+    "subscriptionAvailableTenants": [],
+    "businessInformation": {
+        "businessOwnerEmail": "troy.lenger@random.com",
+        "technicalOwnerEmail": null,
+        "technicalOwner": null,
+        "businessOwner": "APIGW Team"
+    },
+    "corsConfiguration": {
+        "accessControlAllowOrigins": [
+            ""
+        ],
+        "accessControlAllowHeaders": [
+            ""
+        ],
+        "accessControlAllowMethods": [
+            ""
+        ],
+        "accessControlAllowCredentials": false,
+        "corsConfigurationEnabled": false
+    }
+}

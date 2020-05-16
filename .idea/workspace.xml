@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5191e1c1-2246-470c-a676-119d93fa8577" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.core/.launches/karateTest.launch" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.core/.launches/karateTest.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Admin/Admin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Admin/Admin.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Admin/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Admin/Swagger-Admin.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Admin/Swagger-Admin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Admin/Swagger-invalid-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Admin/Swagger-invalid-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Admin/Swagger-missing-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Admin/Swagger-missing-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/AuthServer/authServer.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/AuthServer/authServer.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/BackendSecurity/JetStarBackendSecurity.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/BackendSecurity/JetStarBackendSecurity.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/BackendSecurity/QantasBackendSecurity.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/BackendSecurity/QantasBackendSecurity.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/BackendSecurity/Swagger-Backend.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/BackendSecurity/Swagger-Backend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/BackendSecurity/Swagger-JetStarBackend.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/BackendSecurity/Swagger-JetStarBackend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/ExamplesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/ExamplesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/GatewayNGINX/QantasNGINX.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/GatewayNGINX/QantasNGINX.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/JetStarSandbox/Appdelete.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/JetStarSandbox/Appdelete.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/NGINXBlocker/SwaggerCountries_NGINXBlocker.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/NGINXBlocker/SwaggerCountries_NGINXBlocker.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Publisher/MediationPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Publisher/MediationPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Publisher/Swagger-mediation.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Publisher/Swagger-mediation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/QantasStore/QantasStore.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/QantasStore/QantasStore.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Services/CreateApplicationFromStore.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Services/CreateApplicationFromStore.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Services/GenerateProductionApplicationkeysFromStore.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Services/GenerateProductionApplicationkeysFromStore.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Services/InvokeJetStarNGINXAPIExternalWSO2Gateway.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Services/InvokeJetStarNGINXAPIExternalWSO2Gateway.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Smoke/Smoke.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Smoke/Smoke.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/Smoke/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/Smoke/Swagger-Smoke.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/UI/GroupAccessUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/UI/GroupAccessUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/UI/KarateUI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/UI/KarateUI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/lambda/JetStarLambda.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/lambda/JetStarLambda.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/karate-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/karate-config.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/classes/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/examples/WebSockets/WebSockets.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-485">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="992" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533788636269" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/examples" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/examples" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="[install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5191e1c1-2246-470c-a676-119d93fa8577" name="Default Changelist" comment="" />
+      <created>1533709216213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533709216213</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="920" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17948718" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" visible="true" weight="0.33091787" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/java/examples/ExamplesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/examples/WebSockets/WebSockets.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-485">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>myproject</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

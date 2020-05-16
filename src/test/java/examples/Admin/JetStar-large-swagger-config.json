@@ -1,0 +1,6739 @@
+{
+   "swagger":{
+  "swagger" : "2.0",
+  "host" : "edh-api-non-prod.cloud.random.com",
+  "basePath" : "/jetStarhugeswag",
+  "schemes" :
+  [
+    "https"
+  ],
+  "info" :
+  {
+    "title" : "JetStar LargeSwagger",
+    "version" : "v1",
+    "description" : "JetStar (EDH API)",
+     "contact": {
+        "name": "contact.name",
+        "email": "contact@random.com"
+    },
+    "x-businessOwner": {
+        "name": "businessOwner.name",
+        "email": "businessOwner@random.com"
+    },
+    "x-technicalOwner": {
+        "name": "technicalOwner.name",
+        "email": "technicalOwner@random.com"
+    }
+  },
+  "tags" :
+  [
+  ],
+  "paths" :
+  {
+    "/test" :
+    {
+      "get" :
+      {
+        "summary" : "(PUBLIC) Test API is online",
+        "operationId" : "getV1Test",
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "default" :
+          {
+            "schema" :
+            {
+              "type" : "string"
+            },
+            "description" : "Successful"
+          }
+        }
+      }
+    },
+    "/booking/paxbyflight" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, PRIVATE) List of Passengers by a given Flight",
+        "operationId" : "postV1BookingPaxbyflight",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Flight details"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Passengers found for flight"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Passengers or Flight not found error"
+            },
+            "description" : "Passengers or Flight not found"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/booking/paxprofile" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, CONFIDENTIAL, Internal only) Finds a customer profile for a given passenger. This uses the customer matching table provided by CIP on a daily basis hence it will not provide information for late bookings of non Frequent Flyers.",
+        "operationId" : "postV1BookingPaxprofile",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Passenger lookup details"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Customer IDs found"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "410" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Flight not found"
+            },
+            "description" : "Flight not found"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/booking/pnrlistbyabn" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, PRIVATE) Provides a list of PNR records by ABN number for corporate users (future: or FFNo for Frequent Flyers). The list shows active Bookings in the order of the journey first departure date, followed by PNR Creation date and PNR.",
+        "operationId" : "postV1BookingPnrlistbyabn",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Booking lookup details"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Bookings passengers and flights found"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/ABN or FF No not found error"
+            },
+            "description" : "ABN or FF No not found"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/customer/find" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, PUBLIC) Find customer ID based on search criteria (QFF only)",
+        "operationId" : "postV1CustomerFind",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 4"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 5"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Customer ID not found"
+            },
+            "description" : "Customer not found given API restrictions"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        },
+        "deprecated" : true
+      }
+    },
+    "/customer/profile" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, CONFIDENTIAL) Find customer based on search criteria and list their profile based on a 12 month summary",
+        "operationId" : "postV1CustomerProfile",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 4"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 6"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Customer ID not found"
+            },
+            "description" : "Customer not found given API restrictions"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        },
+        "deprecated" : true
+      }
+    },
+    "/events/flight" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, PUBLIC) Returns the events for a particular flight (backlog/OGS)",
+        "operationId" : "postV1EventsFlight",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 7"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Event Queue"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/events/stream" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, PUBLIC) Returns the events for a given stream, e.g. BOOKING",
+        "operationId" : "postV1EventsStream",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 9"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Event Queue"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/events/type" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, PUBLIC) Returns the events for one or more event types, e.g. SEATCH",
+        "operationId" : "postV1EventsType",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 10"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Event Queue"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/schedules/summary" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, CONFIDENTIAL, Internal only) Finds the flights detail information ",
+        "operationId" : "postV1SchedulesSummary",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Flight schedules summary"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Flight Schedule Summary Found"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/No Matching Flight"
+            },
+            "description" : "No Matching Flight"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/transaction/summary" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, CONFIDENTIAL) Find customer based on search criteria and list their transaction summary. No revenue data included",
+        "operationId" : "postV1TransactionSummary",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 4"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 11"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Customer ID not found"
+            },
+            "description" : "Customer not found given API restrictions"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/booking/product/byabn" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, PRIVATE) Provides a list of Products by ABN. The list shows active products in ascending date order. Products include: Flight segments in the order of the departure date, Car reservations in order of pick up date, Flight credit vouchers in order of expiry date, Gift vouchers in order of expiry date. Pagination done by timestamp.",
+        "operationId" : "postV1BookingProductByabn",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/FF Forward bookings lookup"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Product bookings found for ffNo between fromTimestamp and toTimestamp (inclusive)"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Products not found error"
+            },
+            "description" : "Products not found"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/booking/product/byff" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, PRIVATE) Provides a list of Products by FF number. The list shows active products in ascending date order. Products include: Flight segments in the order of the departure date, Car reservations in order of pick up date, Flight credit vouchers in order of expiry date, Gift vouchers in order of expiry date. Pagination done by timestamp.",
+        "operationId" : "postV1BookingProductByff",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 13"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 16"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Products not found error"
+            },
+            "description" : "Products not found"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/customer/profile/short" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, CONFIDENTIAL) Find customer based on search criteria and list their profile based on a 12 month summary. No revenue data included",
+        "operationId" : "postV1CustomerProfileShort",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 4"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 17"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Customer ID not found"
+            },
+            "description" : "Customer not found given API restrictions"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        },
+        "deprecated" : true
+      }
+    },
+    "/ff/transaction/summary" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, CONFIDENTIAL) Find customer based on search criteria (Frequent Flier Number and, either First name,Surname, or both) and list their transaction summary. No revenue data included",
+        "operationId" : "postV1FfTransactionSummary",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 18"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 11"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Customer ID not found"
+            },
+            "description" : "Customer not found given API restrictions"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/flight/passengers/products" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, CONFIDENTIAL, Internal only) API provides all Air Segments / Vechile Segments for all passengers for a given flight.",
+        "operationId" : "postV1FlightPassengersProducts",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Flight Passengers Products"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 27"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Flight not found"
+            },
+            "description" : "Not Found"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/flight/passengers/servicerequest" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, PRIVATE) List the passengers service request for  a given Flight",
+        "operationId" : "postV1FlightPassengersServicerequest",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 28"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 35"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Passengers or Flight not found error"
+            },
+            "description" : "Passengers or Flight not found"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    },
+    "/flight/passengers/customer/summary" :
+    {
+      "post" :
+      {
+        "summary" : "(Request access from SHR-Customer-Response-Engine@random.com, PRIVATE) List of Passengers by a given Flight",
+        "operationId" : "postV1FlightPassengersCustomerSummary",
+        "parameters" :
+        [
+          {
+            "in" : "body",
+            "name" : "body",
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 36"
+            }
+          }
+        ],
+        "tags" :
+        [
+          ""
+        ],
+        "responses" :
+        {
+          "200" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Model 40"
+            },
+            "description" : "Success"
+          },
+          "400" :
+          {
+            "description" : "Bad Request"
+          },
+          "404" :
+          {
+            "schema" :
+            {
+              "$ref" : "#/definitions/Passengers or Flight not found error"
+            },
+            "description" : "Passengers or Flight not found"
+          },
+          "500" :
+          {
+            "description" : "Internal Server Error"
+          },
+          "503" :
+          {
+            "description" : "Connection Requests Exceed Pool Limit"
+          }
+        }
+      }
+    }
+  },
+  "definitions" :
+  {
+    "Flight details" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "carrier" :
+        {
+          "type" : "string",
+          "description" : "Operational Carrier e.g. QF",
+          "minLength" : 1,
+          "maxLength" : 2,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "flightNo" :
+        {
+          "type" : "string",
+          "description" : "Operational Flight number e.g. 0401",
+          "minLength" : 4,
+          "maxLength" : 4,
+          "pattern" : "^[0-9]+$"
+        },
+        "departureDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Original departure date of flight (local), e.g. 2016-12-26"
+        },
+        "departurePort" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "arrivalPort" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. DXB",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "suffix" :
+        {
+          "type" : "string",
+          "description" : "Operational Suffix indicating delay, e.g. X",
+          "maxLength" : 1,
+          "pattern" : "^[A-Z]+$"
+        },
+        "version" :
+        {
+          "type" : "string",
+          "description" : "API version",
+          "maxLength" : 10,
+          "pattern" : "^1\\.0"
+        }
+      },
+      "required" :
+      [
+        "system",
+        "carrier",
+        "flightNo",
+        "departureDate",
+        "departurePort",
+        "version"
+      ]
+    },
+    "ssr" :
+    {
+      "type" : "array",
+      "description" : "Special Service request array",
+      "minItems" : 1,
+      "maxItems" : 175,
+      "items" :
+      {
+        "type" : "string",
+        "description" : "Special Service Request Code"
+      }
+    },
+    "Model 1" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "passengerLegID" :
+        {
+          "type" : "string",
+          "description" : "Passenger leg ID for booking, bigint",
+          "maxLength" : 20
+        },
+        "prefix" :
+        {
+          "type" : "string",
+          "description" : "Prefix",
+          "minLength" : 1,
+          "maxLength" : 12
+        },
+        "firstName" :
+        {
+          "type" : "string",
+          "description" : "Given Name",
+          "minLength" : 1,
+          "maxLength" : 60
+        },
+        "middleName" :
+        {
+          "type" : "string",
+          "description" : "Middle Name",
+          "maxLength" : 60
+        },
+        "surName" :
+        {
+          "type" : "string",
+          "description" : "Surname",
+          "minLength" : 1,
+          "maxLength" : 60
+        },
+        "ffScheme" :
+        {
+          "type" : "string",
+          "description" : "Frequent flyer scheme",
+          "minLength" : 1,
+          "maxLength" : 2
+        },
+        "ffNo" :
+        {
+          "type" : "string",
+          "description" : "Frequent Flyer number",
+          "maxLength" : 24
+        },
+        "ffTier" :
+        {
+          "type" : "string",
+          "description" : "Frequent Flyer Tier Club Code",
+          "maxLength" : 4
+        },
+        "vipStatus" :
+        {
+          "type" : "string",
+          "description" : "VIP Status",
+          "maxLength" : 4
+        },
+        "vipDesc" :
+        {
+          "type" : "string",
+          "description" : "VIP Description",
+          "maxLength" : 200
+        },
+        "seatNo" :
+        {
+          "type" : "string",
+          "description" : "Seat number",
+          "maxLength" : 5
+        },
+        "checkinStatus" :
+        {
+          "type" : "string",
+          "description" : "Check In Status",
+          "maxLength" : 3
+        },
+        "boardStatus" :
+        {
+          "type" : "string",
+          "description" : "Board Status",
+          "maxLength" : 3
+        },
+        "ssr" :
+        {
+          "$ref" : "#/definitions/ssr"
+        }
+      },
+      "required" :
+      [
+        "prefix",
+        "firstName",
+        "surName",
+        "ffScheme",
+        "ffNo",
+        "ffTier",
+        "vipStatus",
+        "vipDesc",
+        "seatNo",
+        "checkinStatus",
+        "boardStatus",
+        "ssr"
+      ]
+    },
+    "Passengers found for flight" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 1"
+      }
+    },
+    "Passengers or Flight not found error" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "errorCode" :
+        {
+          "type" : "integer",
+          "description" : "Error Code"
+        },
+        "errorDesc" :
+        {
+          "type" : "string",
+          "description" : "Error Description",
+          "maxLength" : 100
+        }
+      },
+      "required" :
+      [
+        "errorCode",
+        "errorDesc"
+      ]
+    },
+    "Passenger lookup details" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "passengerLegID" :
+        {
+          "type" : "string",
+          "description" : "Passenger leg ID for booking, bigint",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "ffScheme" :
+        {
+          "type" : "string",
+          "description" : "Frequent flyer scheme",
+          "minLength" : 1,
+          "maxLength" : 2,
+          "pattern" : "^[0-9A-Z]+$"
+        },
+        "ffNo" :
+        {
+          "type" : "string",
+          "description" : "Frequent Flyer number",
+          "maxLength" : 24,
+          "pattern" : "^[0-9]+$"
+        },
+        "version" :
+        {
+          "type" : "string",
+          "description" : "API version",
+          "maxLength" : 10,
+          "pattern" : "^1\\.0"
+        }
+      },
+      "required" :
+      [
+        "system",
+        "version"
+      ]
+    },
+    "Customer IDs found" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "customerValueRanking" :
+        {
+          "type" : "integer",
+          "description" : "Customer value ranking (QFF only)"
+        },
+        "airlineCustomerValue" :
+        {
+          "type" : "string",
+          "description" : "Airline customer value (QFF only)",
+          "maxLength" : 18
+        },
+        "otherAirlineSchemeCount" :
+        {
+          "type" : "integer",
+          "description" : "Other Airline Scheme Count"
+        },
+        "ffScheme" :
+        {
+          "type" : "string",
+          "description" : "Frequent flyer scheme",
+          "minLength" : 1,
+          "maxLength" : 2
+        },
+        "ffNo" :
+        {
+          "type" : "string",
+          "description" : "Frequent Flyer number",
+          "maxLength" : 24
+        },
+        "ffTier" :
+        {
+          "type" : "string",
+          "description" : "Frequent Flyer Tier Club Code",
+          "maxLength" : 4
+        },
+        "allianceTierCode" :
+        {
+          "type" : "string",
+          "description" : "Alliance Tier Code",
+          "maxLength" : 4
+        },
+        "qfMemberAirlinePriorityLevel" :
+        {
+          "type" : "string",
+          "description" : "QFF Airline Priority Level",
+          "maxLength" : 4
+        },
+        "complaintCount" :
+        {
+          "type" : "integer",
+          "description" : "Complaint Count"
+        },
+        "serviceFailureCount" :
+        {
+          "type" : "integer",
+          "description" : "Service Failure Count"
+        },
+        "surpriseDelightCount" :
+        {
+          "type" : "integer",
+          "description" : "Surprise Delight Count"
+        },
+        "mishandledBagCount" :
+        {
+          "type" : "integer",
+          "description" : "Mishandled Bag Count"
+        },
+        "flightCancellationCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Cancellation Count"
+        },
+        "flightDelayDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Delay Domestic Count"
+        },
+        "flightDelayInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Delay International Count"
+        },
+        "flightUpgradeDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Upgrade Domestic Count"
+        },
+        "flightUpgradeInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Upgrade International Count"
+        },
+        "flightDowngradeDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Downgrade Domestic Count"
+        },
+        "flightDowngradeInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Downgrade International Count"
+        },
+        "flightSegmentCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Segment Count"
+        },
+        "lastUpdatedTimestamp" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Last Updated in Database in format %Y-%m-%d %H(colon)%i(colon)%s"
+        },
+        "summaryCommentText" :
+        {
+          "type" : "string",
+          "description" : "Summary Comment Text",
+          "maxLength" : 200
+        },
+        "randomUniqueID" :
+        {
+          "type" : "string",
+          "description" : "Unique Consolidated Customer ID for FF/non-FF Customers",
+          "maxLength" : 24
+        },
+        "majorityQCI" :
+        {
+          "type" : "string",
+          "description" : "Majority random Corporate Indicator",
+          "maxLength" : 3
+        },
+        "majorCorpCountryCode" :
+        {
+          "type" : "string",
+          "description" : "Majority Coporation Country Code",
+          "maxLength" : 4
+        },
+        "majorCorpBCI" :
+        {
+          "type" : "string",
+          "description" : "Majority British Airways Corporate Indicator",
+          "maxLength" : 7
+        },
+        "majorCorpACI" :
+        {
+          "type" : "string",
+          "description" : "Majority ACI",
+          "maxLength" : 7
+        },
+        "majorCorpOCI" :
+        {
+          "type" : "string",
+          "description" : "Majority Other Corporate Indicator",
+          "maxLength" : 7
+        },
+        "majorCorpName" :
+        {
+          "type" : "string",
+          "description" : "Majority Corporation Name",
+          "maxLength" : 70
+        },
+        "majorCorpAltName" :
+        {
+          "type" : "string",
+          "description" : "Majority Corporation Alternative Name",
+          "maxLength" : 70
+        }
+      },
+      "required" :
+      [
+        "customerValueRanking",
+        "airlineCustomerValue",
+        "otherAirlineSchemeCount",
+        "ffScheme",
+        "ffNo",
+        "ffTier",
+        "allianceTierCode",
+        "qfMemberAirlinePriorityLevel",
+        "complaintCount",
+        "serviceFailureCount",
+        "surpriseDelightCount",
+        "mishandledBagCount",
+        "flightCancellationCount",
+        "flightDelayDomesticCount",
+        "flightDelayInternationalCount",
+        "flightUpgradeDomesticCount",
+        "flightUpgradeInternationalCount",
+        "flightDowngradeDomesticCount",
+        "flightDowngradeInternationalCount",
+        "flightSegmentCount",
+        "lastUpdatedTimestamp",
+        "summaryCommentText",
+        "randomUniqueID",
+        "majorityQCI",
+        "majorCorpCountryCode",
+        "majorCorpBCI",
+        "majorCorpACI",
+        "majorCorpOCI",
+        "majorCorpName",
+        "majorCorpAltName"
+      ]
+    },
+    "Flight not found" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "errorCode" :
+        {
+          "type" : "integer",
+          "description" : "Error Code"
+        },
+        "errorDesc" :
+        {
+          "type" : "string",
+          "description" : "Error Description",
+          "maxLength" : 100
+        }
+      },
+      "required" :
+      [
+        "errorCode",
+        "errorDesc"
+      ]
+    },
+    "Booking lookup details" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "abn" :
+        {
+          "type" : "string",
+          "description" : "Australian Business Number. Exactly 11 decimal digits",
+          "minLength" : 11,
+          "maxLength" : 11,
+          "pattern" : "^\\d+$"
+        },
+        "bookingPage" :
+        {
+          "type" : "integer",
+          "description" : "Page number of bookings to return, default is 1 (first page of booking results)",
+          "default" : 1,
+          "minimum" : 1
+        },
+        "version" :
+        {
+          "type" : "string",
+          "description" : "API version",
+          "maxLength" : 10,
+          "pattern" : "^1\\.0"
+        }
+      },
+      "required" :
+      [
+        "system",
+        "abn",
+        "version"
+      ]
+    },
+    "passenger" :
+    {
+      "type" : "object",
+      "description" : "Lead passenger in booking",
+      "properties" :
+      {
+        "passengerTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a passenger"
+        },
+        "prefix" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name prefix, e.g. Mr, Mrs",
+          "maxLength" : 12
+        },
+        "firstName" :
+        {
+          "type" : "string",
+          "description" : "Passenger first name",
+          "maxLength" : 56
+        },
+        "surName" :
+        {
+          "type" : "string",
+          "description" : "Passenger last name",
+          "maxLength" : 57
+        },
+        "ffNo" :
+        {
+          "type" : "string",
+          "description" : "Frequent flyer number",
+          "maxLength" : 16
+        },
+        "ffScheme" :
+        {
+          "type" : "string",
+          "description" : "Frequent flyer scheme code",
+          "maxLength" : 3
+        }
+      },
+      "required" :
+      [
+        "passengerTattoo",
+        "prefix",
+        "firstName",
+        "surName"
+      ]
+    },
+    "Model 2" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "segmentTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a flight in a booking"
+        },
+        "mktCarrier" :
+        {
+          "type" : "string",
+          "description" : "Marketing Carrier Eg: QF, EK",
+          "maxLength" : 4
+        },
+        "mktFlightNo" :
+        {
+          "type" : "string",
+          "description" : "Marketing Flight Number Eg: 0001, 0410",
+          "minLength" : 1,
+          "maxLength" : 4
+        },
+        "departureDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Departure date of flight segment (local), e.g. 2016-12-26"
+        },
+        "departureUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Departure date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "departureTime" :
+        {
+          "type" : "string",
+          "description" : "Departure time of flight segment (local), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "departureUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Departure time of flight segment (UTC), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "departurePort" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "arrivalDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Arrival date of flight segment (local), e.g. 2016-12-26"
+        },
+        "arrivalUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Arrival date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "arrivalTime" :
+        {
+          "type" : "string",
+          "description" : "Arrival time of flight segment (local), e.g. HH:MM:SS",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "arrivalUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Arrival time of flight segment (UTC), e.g. HH:MM:SS",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "arrivalPort" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "reservationStatus" :
+        {
+          "type" : "string",
+          "description" : "Reservation status, e.g. HK, Confirmed, Waitlisted",
+          "maxLength" : 2
+        },
+        "cabinClass" :
+        {
+          "type" : "string",
+          "description" : "Cabin class for flight segment, e.g. Y",
+          "maxLength" : 1
+        }
+      },
+      "required" :
+      [
+        "segmentTattoo",
+        "mktCarrier",
+        "mktFlightNo",
+        "departureDate",
+        "departureUTCDate",
+        "departureTime",
+        "departureUTCTime",
+        "departurePort",
+        "arrivalDate",
+        "arrivalUTCDate",
+        "arrivalTime",
+        "arrivalUTCTime",
+        "arrivalPort",
+        "reservationStatus",
+        "cabinClass"
+      ]
+    },
+    "flight" :
+    {
+      "type" : "array",
+      "description" : "Flight segments in booking",
+      "minItems" : 1,
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 2"
+      }
+    },
+    "Model 3" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "pnr" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name Record",
+          "minLength" : 6,
+          "maxLength" : 6
+        },
+        "pnrCreationDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Booking Creation Date, e.g. 2016-12-26"
+        },
+        "paxQuantity" :
+        {
+          "type" : "integer",
+          "description" : "PNR Passenger count",
+          "minimum" : 1,
+          "maximum" : 10000
+        },
+        "passenger" :
+        {
+          "$ref" : "#/definitions/passenger"
+        },
+        "flight" :
+        {
+          "$ref" : "#/definitions/flight"
+        }
+      },
+      "required" :
+      [
+        "pnr",
+        "pnrCreationDate",
+        "paxQuantity",
+        "flight"
+      ]
+    },
+    "booking" :
+    {
+      "type" : "array",
+      "description" : "Bookings found ordered by departure date of first flight, followed by PNR creation date followed by PNR",
+      "minItems" : 1,
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 3"
+      }
+    },
+    "Bookings passengers and flights found" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "booking" :
+        {
+          "$ref" : "#/definitions/booking"
+        },
+        "bookingNextPage" :
+        {
+          "type" : "integer",
+          "description" : "Present if further pages exist that should be queried with the bookingPage set to this value. If not present it means no further pages need to be retrieved",
+          "minimum" : 1
+        }
+      },
+      "required" :
+      [
+        "booking"
+      ]
+    },
+    "ABN or FF No not found error" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "errorCode" :
+        {
+          "type" : "integer",
+          "description" : "Error Code"
+        },
+        "errorDesc" :
+        {
+          "type" : "string",
+          "description" : "Error Description",
+          "maxLength" : 100
+        }
+      },
+      "required" :
+      [
+        "errorCode",
+        "errorDesc"
+      ]
+    },
+    "Model 4" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling systemId",
+          "minLength" : 1,
+          "maxLength" : 500,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "firstName" :
+        {
+          "type" : "string",
+          "description" : "Given Name",
+          "minLength" : 1,
+          "maxLength" : 60
+        },
+        "middleName" :
+        {
+          "type" : "string",
+          "description" : "Middle Name",
+          "maxLength" : 60
+        },
+        "surName" :
+        {
+          "type" : "string",
+          "description" : "Surname",
+          "minLength" : 1,
+          "maxLength" : 60
+        },
+        "prefix" :
+        {
+          "type" : "string",
+          "description" : "Prefix",
+          "maxLength" : 12
+        },
+        "salutation" :
+        {
+          "type" : "string",
+          "description" : "Salutation",
+          "maxLength" : 60
+        },
+        "randomUniqueID" :
+        {
+          "type" : "string",
+          "description" : "Unique Consolidated Customer ID for FF/non-FF Customers",
+          "maxLength" : 24,
+          "pattern" : "^-?\\d{1,24}$"
+        },
+        "randomFFNo" :
+        {
+          "type" : "string",
+          "description" : "random Frequent Flyer number (non padded & 7/10-digit (zero padded) FF numbers accepted)",
+          "maxLength" : 24,
+          "pattern" : "^[0-9]+$"
+        },
+        "birthDate" :
+        {
+          "type" : "string",
+          "description" : "Format DD/MM/YYYY",
+          "pattern" : "^\\d{2}\\/\\d{2}\\/\\d{4}$"
+        },
+        "genderCode" :
+        {
+          "type" : "string",
+          "description" : "Gender Code",
+          "maxLength" : 4,
+          "pattern" : "^[A-Z ]+$"
+        },
+        "addressLine1" :
+        {
+          "type" : "string",
+          "description" : "Address line 1",
+          "maxLength" : 50
+        },
+        "addressLine2" :
+        {
+          "type" : "string",
+          "description" : "Address line 2",
+          "maxLength" : 50
+        },
+        "addressLine3" :
+        {
+          "type" : "string",
+          "description" : "Address line 3",
+          "maxLength" : 50
+        },
+        "addressLine4" :
+        {
+          "type" : "string",
+          "description" : "Address line 4",
+          "maxLength" : 50
+        },
+        "suburb" :
+        {
+          "type" : "string",
+          "description" : "Suburb",
+          "maxLength" : 40
+        },
+        "postCode" :
+        {
+          "type" : "string",
+          "description" : "Post code",
+          "maxLength" : 8
+        },
+        "state" :
+        {
+          "type" : "string",
+          "description" : "State code",
+          "maxLength" : 8
+        },
+        "country" :
+        {
+          "type" : "string",
+          "description" : "Country code",
+          "maxLength" : 2,
+          "pattern" : "^[A-Z ]+$"
+        },
+        "countryName" :
+        {
+          "type" : "string",
+          "description" : "Country name",
+          "maxLength" : 30,
+          "pattern" : "^[A-Z0-9&(),'\\- ]+$"
+        },
+        "phoneCountryCode" :
+        {
+          "type" : "string",
+          "description" : "Phone number Country code",
+          "maxLength" : 4,
+          "pattern" : "^\\d+$"
+        },
+        "phoneAreaCode" :
+        {
+          "type" : "string",
+          "description" : "Phone number Area code",
+          "maxLength" : 5,
+          "pattern" : "^\\d+$"
+        },
+        "phoneLineNumber" :
+        {
+          "type" : "string",
+          "description" : "Phone line number",
+          "maxLength" : 25,
+          "pattern" : "^\\d+$"
+        },
+        "phoneExtension" :
+        {
+          "type" : "string",
+          "description" : "Phone line extension",
+          "maxLength" : 25,
+          "pattern" : "^\\d+$"
+        },
+        "emailAddr" :
+        {
+          "type" : "string",
+          "description" : "Email Address",
+          "maxLength" : 101,
+          "x-format" :
+          {
+            "email" : true
+          }
+        },
+        "travelDocTypeCode" :
+        {
+          "type" : "string",
+          "description" : "Travel document Type code",
+          "maxLength" : 4,
+          "pattern" : "^[A-Z0-9 ]+$"
+        },
+        "travelDocId" :
+        {
+          "type" : "string",
+          "description" : "Travel Document ID",
+          "maxLength" : 16,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "travelDocIssueCountry" :
+        {
+          "type" : "string",
+          "description" : "Travel Document Issuing Country",
+          "maxLength" : 4,
+          "pattern" : "^[A-Z0-9 ]+$"
+        },
+        "version" :
+        {
+          "type" : "string",
+          "description" : "API version",
+          "maxLength" : 10,
+          "pattern" : "^1\\.0"
+        }
+      },
+      "required" :
+      [
+        "system",
+        "firstName",
+        "surName",
+        "version"
+      ]
+    },
+    "Model 5" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "randomUniqueID" :
+        {
+          "type" : "string",
+          "description" : "Unique Consolidated Customer ID for FF/non-FF Customers",
+          "maxLength" : 24
+        },
+        "randomFFNo" :
+        {
+          "type" : "string",
+          "description" : "random Frequent Flyer number, min 10 digits (left padded with 0s if required)",
+          "minLength" : 10,
+          "maxLength" : 24
+        },
+        "customerMatchScore" :
+        {
+          "type" : "integer",
+          "description" : "Number of Points the Request Criteria Achieved in Identify Check",
+          "minimum" : 0
+        }
+      },
+      "required" :
+      [
+        "randomUniqueID",
+        "randomFFNo",
+        "customerMatchScore"
+      ]
+    },
+    "Customer ID not found" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "errorCode" :
+        {
+          "type" : "integer",
+          "description" : "Error Code"
+        },
+        "errorDesc" :
+        {
+          "type" : "string",
+          "description" : "Error Description",
+          "maxLength" : 100
+        }
+      },
+      "required" :
+      [
+        "errorCode",
+        "errorDesc"
+      ]
+    },
+    "Model 6" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "customerValueRanking" :
+        {
+          "type" : "integer",
+          "description" : "Customer value ranking (QFF only)"
+        },
+        "airlineCustomerValue" :
+        {
+          "type" : "string",
+          "description" : "Airline customer value (QFF only)",
+          "maxLength" : 18
+        },
+        "otherAirlineSchemeCount" :
+        {
+          "type" : "integer",
+          "description" : "Other Airline Scheme Count"
+        },
+        "randomFFNo" :
+        {
+          "type" : "string",
+          "description" : "random Frequent Flyer number, min 10 digits (left padded with 0s if required)",
+          "minLength" : 10,
+          "maxLength" : 24
+        },
+        "qfMemberAirlinePriorityLevel" :
+        {
+          "type" : "string",
+          "description" : "QFF Airline Priority Level",
+          "maxLength" : 4
+        },
+        "qfMemberTierClubCode" :
+        {
+          "type" : "string",
+          "description" : "QFF Tier Club Code",
+          "maxLength" : 4
+        },
+        "nettRevenueYear0Amount" :
+        {
+          "type" : "number",
+          "description" : "Nett Revenue Year 0 Amount",
+          "maximum" : 9999999999999.99,
+          "x-constraint" :
+          {
+            "precision" : 2
+          }
+        },
+        "nettRevenueYear1Amount" :
+        {
+          "type" : "number",
+          "description" : "Nett Revenue Year 1 Amount",
+          "maximum" : 9999999999999.99,
+          "x-constraint" :
+          {
+            "precision" : 2
+          }
+        },
+        "nettRevenueYear2Amount" :
+        {
+          "type" : "number",
+          "description" : "Nett Revenue Year 2 Amount",
+          "maximum" : 9999999999999.99,
+          "x-constraint" :
+          {
+            "precision" : 2
+          }
+        },
+        "complaintCount" :
+        {
+          "type" : "integer",
+          "description" : "Complaint Count"
+        },
+        "serviceFailureCount" :
+        {
+          "type" : "integer",
+          "description" : "Service Failure Count"
+        },
+        "surpriseDelightCount" :
+        {
+          "type" : "integer",
+          "description" : "Surprise Delight Count"
+        },
+        "mishandledBagCount" :
+        {
+          "type" : "integer",
+          "description" : "Mishandled Bag Count"
+        },
+        "flightCancellationCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Cancellation Count"
+        },
+        "flightDelayDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Delay Domestic Count"
+        },
+        "flightDelayInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Delay International Count"
+        },
+        "flightUpgradeDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Upgrade Domestic Count"
+        },
+        "flightUpgradeInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Upgrade International Count"
+        },
+        "flightDowngradeDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Downgrade Domestic Count"
+        },
+        "flightDowngradeInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Downgrade International Count"
+        },
+        "flightSegmentCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Segment Count"
+        },
+        "lastUpdatedTimestamp" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Last Updated in Database in format %Y-%m-%d %H(colon)%i(colon)%s"
+        },
+        "summaryCommentText" :
+        {
+          "type" : "string",
+          "description" : "Summary Comment Text",
+          "maxLength" : 200
+        },
+        "randomUniqueID" :
+        {
+          "type" : "string",
+          "description" : "Unique Consolidated Customer ID for FF/non-FF Customers",
+          "maxLength" : 24
+        },
+        "majorityQCI" :
+        {
+          "type" : "string",
+          "description" : "Majority random Corporate Indicator",
+          "maxLength" : 3
+        },
+        "majorCorpCountryCode" :
+        {
+          "type" : "string",
+          "description" : "Majority Coporation Country Code",
+          "maxLength" : 4
+        },
+        "majorCorpBCI" :
+        {
+          "type" : "string",
+          "description" : "Majority British Airways Corporate Indicator",
+          "maxLength" : 7
+        },
+        "majorCorpACI" :
+        {
+          "type" : "string",
+          "description" : "Majority ACI",
+          "maxLength" : 7
+        },
+        "majorCorpOCI" :
+        {
+          "type" : "string",
+          "description" : "Majority Other Corporate Indicator",
+          "maxLength" : 7
+        },
+        "majorCorpName" :
+        {
+          "type" : "string",
+          "description" : "Majority Corporation Name",
+          "maxLength" : 70
+        },
+        "majorCorpAltName" :
+        {
+          "type" : "string",
+          "description" : "Majority Corporation Alternative Name",
+          "maxLength" : 70
+        },
+        "customerMatchScore" :
+        {
+          "type" : "integer",
+          "description" : "Number of Points the Request Criteria Achieved in Identify Check",
+          "minimum" : 0
+        }
+      },
+      "required" :
+      [
+        "customerValueRanking",
+        "airlineCustomerValue",
+        "otherAirlineSchemeCount",
+        "randomFFNo",
+        "qfMemberAirlinePriorityLevel",
+        "qfMemberTierClubCode",
+        "nettRevenueYear0Amount",
+        "nettRevenueYear1Amount",
+        "nettRevenueYear2Amount",
+        "complaintCount",
+        "serviceFailureCount",
+        "surpriseDelightCount",
+        "mishandledBagCount",
+        "flightCancellationCount",
+        "flightDelayDomesticCount",
+        "flightDelayInternationalCount",
+        "flightUpgradeDomesticCount",
+        "flightUpgradeInternationalCount",
+        "flightDowngradeDomesticCount",
+        "flightDowngradeInternationalCount",
+        "flightSegmentCount",
+        "lastUpdatedTimestamp",
+        "summaryCommentText",
+        "randomUniqueID",
+        "majorityQCI",
+        "majorCorpCountryCode",
+        "majorCorpBCI",
+        "majorCorpACI",
+        "majorCorpOCI",
+        "majorCorpName",
+        "majorCorpAltName",
+        "customerMatchScore"
+      ]
+    },
+    "Model 7" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "fromTimeStamp" :
+        {
+          "type" : "integer",
+          "description" : "Query will run from and inclusive of fromTimeStamp. Inclusive beginning of range. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "toTimeStamp" :
+        {
+          "type" : "integer",
+          "description" : "Query will run up to and inclusive of toTimeStamp. Should be greater than or equal to fromTimeStamp. Defaults to current time. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z))). Should not be greater than the system current time",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "carrier" :
+        {
+          "type" : "string",
+          "description" : "Marketing Carrier e.g. QF",
+          "minLength" : 1,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "flightNo" :
+        {
+          "type" : "string",
+          "description" : "Marketing Flight number e.g. 0401",
+          "minLength" : 4,
+          "maxLength" : 4,
+          "pattern" : "\\d{4}"
+        },
+        "departureDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Original local departure date of flight, e.g. 2016-12-26"
+        },
+        "departurePort" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "arrivalPort" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. DXB",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "suffix" :
+        {
+          "type" : "string",
+          "description" : "Marketing Suffix indicating delay, e.g. X",
+          "maxLength" : 1,
+          "pattern" : "^[A-Z]+$"
+        },
+        "version" :
+        {
+          "type" : "number",
+          "description" : "API Version",
+          "minimum" : 1,
+          "maximum" : 99999.9999,
+          "x-constraint" :
+          {
+            "precision" : 4
+          }
+        }
+      },
+      "required" :
+      [
+        "system",
+        "fromTimeStamp",
+        "carrier",
+        "flightNo",
+        "departureDate",
+        "departurePort",
+        "version"
+      ]
+    },
+    "Model 8" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "stream" :
+        {
+          "type" : "string",
+          "description" : "The stream indicator is a category that allows subscribers to specify some granularity in requesting",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "timeStamp" :
+        {
+          "type" : "integer",
+          "description" : "Date time in MS from 1-1-1970 (is the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)). This timestamp is used for checkpointing a consumer request.",
+          "minimum" : 0,
+          "maximum" : 9007199254740991
+        },
+        "version" :
+        {
+          "type" : "number",
+          "description" : "Version identifier specifying with version of of the event notification format is used",
+          "maximum" : 99999.9999,
+          "x-constraint" :
+          {
+            "precision" : 4,
+            "positive" : true
+          }
+        },
+        "eventType" :
+        {
+          "type" : "string",
+          "description" : "Value that uniquely identifies the changed record for the consumer application to collect via the API.",
+          "maxLength" : 20
+        },
+        "srcType1" :
+        {
+          "type" : "string",
+          "description" : "Type of data change, mostly corresponding to the main data feed or section of a data feed.",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "srcValue1" :
+        {
+          "type" : "string",
+          "description" : "Value that uniquely identifies the changed record for the consumer application to collect via the API.",
+          "maxLength" : 20
+        },
+        "srcType2" :
+        {
+          "type" : "string",
+          "description" : "Type of data change, mostly corresponding to the main data feed or section of a data feed.",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "srcValue2" :
+        {
+          "type" : "string",
+          "description" : "Value that uniquely identifies the changed record for the consumer application to collect via the API.",
+          "maxLength" : 20
+        },
+        "srcType3" :
+        {
+          "type" : "string",
+          "description" : "Type of data change, mostly corresponding to the main data feed or section of a data feed.",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "srcValue3" :
+        {
+          "type" : "string",
+          "description" : "Value that uniquely identifies the changed record for the consumer application to collect via the API.",
+          "maxLength" : 20
+        },
+        "srcType4" :
+        {
+          "type" : "string",
+          "description" : "Type of data change, mostly corresponding to the main data feed or section of a data feed.",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "srcValue4" :
+        {
+          "type" : "string",
+          "description" : "Value that uniquely identifies the changed record for the consumer application to collect via the API.",
+          "maxLength" : 20
+        },
+        "srcType5" :
+        {
+          "type" : "string",
+          "description" : "Type of data change, mostly corresponding to the main data feed or section of a data feed.",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "srcValue5" :
+        {
+          "type" : "string",
+          "description" : "Value that uniquely identifies the changed record for the consumer application to collect via the API.",
+          "maxLength" : 20
+        },
+        "srcType6" :
+        {
+          "type" : "string",
+          "description" : "Type of data change, mostly corresponding to the main data feed or section of a data feed.",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "srcValue6" :
+        {
+          "type" : "string",
+          "description" : "Value that uniquely identifies the changed record for the consumer application to collect via the API.",
+          "maxLength" : 20
+        },
+        "other" :
+        {
+          "type" : "string",
+          "description" : "Other Identifiers specific to a special event. This will be a JSON structure unless there is a formatting error in which case it will be kept as a string. The JSON here gives more detailed data where an event might want to publish additional information."
+        },
+        "seqNo" :
+        {
+          "type" : "integer",
+          "description" : "Sequence number - events will be ordered by timeStamp then by seqNo, eventType, srcValue1..6"
+        }
+      },
+      "required" :
+      [
+        "stream",
+        "timeStamp",
+        "version",
+        "eventType",
+        "srcType1",
+        "srcValue1",
+        "srcType2",
+        "srcValue2",
+        "srcType3",
+        "srcValue3",
+        "srcType4",
+        "srcValue4",
+        "srcType5",
+        "srcValue5",
+        "srcType6",
+        "srcValue6",
+        "seqNo"
+      ]
+    },
+    "events" :
+    {
+      "type" : "array",
+      "description" : "Array of zero or more events in the queue returned in chronological order",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 8"
+      }
+    },
+    "Event Queue" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "checkPoint" :
+        {
+          "type" : "integer",
+          "description" : "Timestamp in the event database where to start searching from. This is also equal to the last Timestamp in the Array of events that the query returned. Every following query will user a where clause of > Checkpoint (FromTimestamp).         This value must be stored on the client side to ensure that no duplicate events will be processed.",
+          "minimum" : 0,
+          "maximum" : 9007199254740991
+        },
+        "page" :
+        {
+          "type" : "boolean",
+          "description" : "Value true - there are more records to fetch, false - no more records to fetch"
+        },
+        "events" :
+        {
+          "$ref" : "#/definitions/events"
+        }
+      },
+      "required" :
+      [
+        "checkPoint",
+        "page",
+        "events"
+      ]
+    },
+    "Model 9" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "stream" :
+        {
+          "type" : "string",
+          "description" : "The stream indicator is a category that allows subscribers to specify some granularity in requesting e.g. BOOKING, FLIGHT, CUSTOMER",
+          "enum" :
+          [
+            "FLIGHT",
+            "BOOKING"
+          ],
+          "minLength" : 1,
+          "maxLength" : 8
+        },
+        "fromTimeStamp" :
+        {
+          "type" : "integer",
+          "description" : "Query will run from and inclusive of fromTimeStamp. Inclusive beginning of range. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)). ",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "toTimeStamp" :
+        {
+          "type" : "integer",
+          "description" : "Query will run up and inclusive of toTimeStamp. Should be greater than or equal to fromTimeStamp. Default to current time. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)). Should not be greater than the system current time",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "type" :
+        {
+          "type" : "string",
+          "description" : "Type of data change, mostly corresponding to the main data feed or section of a data feed. Examples PNR (PNR), PNRCrtDt (PNR Create Date), CrrFNoSx (Carrier+FlightNo+Suffix), DAirC (Departure Airport Code), DepDate (Departure Date), AAirC (Arrival Airport Code), Carrier, Flight,No Suffix, TPID (future), OGS (future), CUS (future)",
+          "enum" :
+          [
+            "PNR",
+            "PNRCrtDt",
+            "CrrFNoSx",
+            "DAirC",
+            "DepDate",
+            "AAirC",
+            "Carrier",
+            "FlightNo",
+            "Suffix"
+          ],
+          "minLength" : 1,
+          "maxLength" : 8
+        },
+        "identifier" :
+        {
+          "type" : "string",
+          "description" : "Value that uniquely identifies the changed record for the consumer application to collect via the API. Examples PNR Number, if a date must be in YYYY-MM-DD format, if CrrFNoSx must be in Carrier+FlightNo+Suffix delimited by a literal plus sign",
+          "maxLength" : 20
+        },
+        "version" :
+        {
+          "type" : "number",
+          "description" : "API Version",
+          "minimum" : 1,
+          "maximum" : 99999.9999,
+          "x-constraint" :
+          {
+            "precision" : 4
+          }
+        }
+      },
+      "required" :
+      [
+        "system",
+        "stream",
+        "fromTimeStamp",
+        "version"
+      ]
+    },
+    "eventTypeID" :
+    {
+      "type" : "array",
+      "description" : "Code identifying the business event type. e.g. AIRCRAFTCHNG,AIRDIVERSION,AIRRETURN,BLOCKON,BLOCKSOFF,CODESHARE,ESTIMATECHANGE,FLIGHTCANCEL,FLIGHTDELETE,FLTBOARDSTATCH,GATECHANGE,GROUNDRETURN,SCHEDULECHANGE,TERMINALCHANGE,WHEELOFF,WHEELON,BOARDSTATCH,BOARD,CHECKINSTATCH,ENDBOARD,NEWBOOK,NONBOARD,SEATCH,CHECKIN,STARTBOARD",
+      "minItems" : 1,
+      "items" :
+      {
+        "type" : "string",
+        "description" : "Event type",
+        "enum" :
+        [
+          "AIRCRAFTCHNG",
+          "AIRDIVERSION",
+          "AIRRETURN",
+          "BLOCKON",
+          "BLOCKSOFF",
+          "CODESHARE",
+          "ESTIMATECHANGE",
+          "FLIGHTCANCEL",
+          "FLIGHTDELETE",
+          "FLTBOARDSTATCH",
+          "GATECHANGE",
+          "GROUNDRETURN",
+          "SCHEDULECHANGE",
+          "TERMINALCHANGE",
+          "WHEELOFF",
+          "WHEELON",
+          "BOARDSTATCH",
+          "BOARD",
+          "CHECKINSTATCH",
+          "ENDBOARD",
+          "NEWBOOK",
+          "NONBOARD",
+          "SEATCH",
+          "CHECKIN",
+          "STARTBOARD"
+        ]
+      }
+    },
+    "Model 10" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "fromTimeStamp" :
+        {
+          "type" : "integer",
+          "description" : "Query will run from and inclusive of fromTimeStamp. Inclusive beginning of range. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)). ",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "toTimeStamp" :
+        {
+          "type" : "integer",
+          "description" : "Query will run up and inclusive of toTimeStamp. Should be greater than or equal to fromTimeStamp. Defaults to current time. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)). Should not be greater than the system current time",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "eventTypeID" :
+        {
+          "$ref" : "#/definitions/eventTypeID"
+        },
+        "version" :
+        {
+          "type" : "number",
+          "description" : "API Version",
+          "minimum" : 1,
+          "maximum" : 99999.9999,
+          "x-constraint" :
+          {
+            "precision" : 4
+          }
+        }
+      },
+      "required" :
+      [
+        "system",
+        "fromTimeStamp",
+        "eventTypeID",
+        "version"
+      ]
+    },
+    "Flight schedules summary" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "departureDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Original departure date of flight (local), e.g. 2016-12-26"
+        },
+        "carrier" :
+        {
+          "type" : "string",
+          "description" : "Operational Carrier e.g. QF",
+          "minLength" : 1,
+          "maxLength" : 2,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "flightNo" :
+        {
+          "type" : "string",
+          "description" : "Operational Flight number e.g. 0401",
+          "minLength" : 4,
+          "maxLength" : 4,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "suffix" :
+        {
+          "type" : "string",
+          "description" : "Operational Suffix indicating delay, e.g. X",
+          "maxLength" : 1,
+          "pattern" : "^[A-Z]+$"
+        },
+        "departurePort" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "arrivalPort" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. DXB",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "version" :
+        {
+          "type" : "number",
+          "description" : "API version",
+          "enum" :
+          [
+            1
+          ]
+        }
+      },
+      "required" :
+      [
+        "system",
+        "departureDate",
+        "carrier",
+        "flightNo",
+        "departurePort",
+        "version"
+      ]
+    },
+    "Flight Schedule Summary Found" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "mktCarrier" :
+        {
+          "type" : "string",
+          "description" : "Marketing Carrier Eg: QF, EK",
+          "maxLength" : 4
+        },
+        "mktFlightNo" :
+        {
+          "type" : "string",
+          "description" : "Marketing Flight Number Eg: 0001, 0410",
+          "minLength" : 1,
+          "maxLength" : 4
+        },
+        "suffix" :
+        {
+          "type" : "string",
+          "description" : "Operational Suffix indicating delay, e.g. X",
+          "maxLength" : 1,
+          "pattern" : "^[A-Z]+$"
+        },
+        "departureAirportCode" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "departureAirportName" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Name, e.g. Sydney"
+        },
+        "arrivalAirportCode" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. MEL",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "arrivalAirportName" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Name, e.g. Melbourne"
+        },
+        "departureTerminal" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Terminal, e.g. T1"
+        },
+        "departureGate" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Gate, e.g. 34"
+        },
+        "arrivalTerminal" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Terminal, e.g. T1"
+        },
+        "arrivalGate" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Gate, e.g. 34"
+        },
+        "equipmentTailNumber" :
+        {
+          "type" : "string",
+          "description" : "Equipment tail number, e.g. VHEBP, VHOEH"
+        },
+        "equipmentTypeCode" :
+        {
+          "type" : "string",
+          "description" : "Equipment type code, e.g. 330, DH8"
+        },
+        "equipmentSubTypeCode" :
+        {
+          "type" : "string",
+          "description" : "Equipment sub type code, e.g. 332, 73H"
+        },
+        "equipmentTypeName" :
+        {
+          "type" : "string",
+          "description" : "Equipment type name, e.g. "
+        },
+        "flightStatus" :
+        {
+          "type" : "string",
+          "description" : "Equipment flight status, e.g. BOARDING - OPEN, BOARDING, BOARDING - FINAL CALL, BOARDING CLOSE, DEPARTED, LANDED"
+        },
+        "flightDuration" :
+        {
+          "type" : "integer",
+          "description" : "Equipment flight duration in mins, e.g. 95, 135"
+        },
+        "scheduledDepartureLocalDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Scheduled departure date of flight segment (local), e.g. 2016-12-26"
+        },
+        "scheduledDepartureLocalTime" :
+        {
+          "type" : "string",
+          "description" : "Scheduled departure time of flight segment (local), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "scheduledDepartureUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Scheduled departure date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "scheduledDepartureUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Scheduled departure time of flight segment (UTC), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "estimatedDepartureLocalDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Estimated departure date of flight segment (local), e.g. 2016-12-26"
+        },
+        "estimatedDepartureLocalTime" :
+        {
+          "type" : "string",
+          "description" : "Estimated departure time of flight segment (local), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "estimatedDepartureUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Estimated departure date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "estimatedDepartureUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Estimated departure time of flight segment (UTC), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "scheduledArrivalLocalDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Scheduled arrival date of flight segment (local), e.g. 2016-12-26"
+        },
+        "scheduledArrivalLocalTime" :
+        {
+          "type" : "string",
+          "description" : "Scheduled arrival time of flight segment (local), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "scheduledArrivalUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Scheduled arrival date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "scheduledArrivalUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Scheduled arrival time of flight segment (UTC), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "estimatedArrivalLocalDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Estimated arrival date of flight segment (local), e.g. 2016-12-26"
+        },
+        "estimatedArrivalLocalTime" :
+        {
+          "type" : "string",
+          "description" : "Estimated arrival time of flight segment (local), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "estimatedArrivalUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Estimated arrival date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "estimatedArrivalUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Estimated arrival time of flight segment (UTC), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "primaryBaggageCarousel" :
+        {
+          "type" : "string",
+          "description" : "Primary baggage carousel, e.g. 1",
+          "maxLength" : 8
+        },
+        "secondaryBaggageCarousel" :
+        {
+          "type" : "string",
+          "description" : "Secondary baggage carousel, e.g. 1",
+          "maxLength" : 8
+        }
+      },
+      "required" :
+      [
+        "mktCarrier",
+        "mktFlightNo",
+        "departureAirportCode",
+        "departureAirportName",
+        "arrivalAirportCode",
+        "arrivalAirportName",
+        "departureTerminal",
+        "departureGate",
+        "arrivalTerminal",
+        "arrivalGate",
+        "equipmentTailNumber",
+        "equipmentTypeCode",
+        "equipmentSubTypeCode",
+        "equipmentTypeName",
+        "flightStatus",
+        "flightDuration",
+        "scheduledDepartureLocalDate",
+        "scheduledDepartureLocalTime",
+        "scheduledDepartureUTCDate",
+        "scheduledDepartureUTCTime",
+        "estimatedDepartureLocalDate",
+        "estimatedDepartureLocalTime",
+        "estimatedDepartureUTCDate",
+        "estimatedDepartureUTCTime",
+        "scheduledArrivalLocalDate",
+        "scheduledArrivalLocalTime",
+        "scheduledArrivalUTCDate",
+        "scheduledArrivalUTCTime",
+        "estimatedArrivalLocalDate",
+        "estimatedArrivalLocalTime",
+        "estimatedArrivalUTCDate",
+        "estimatedArrivalUTCTime",
+        "primaryBaggageCarousel",
+        "secondaryBaggageCarousel"
+      ]
+    },
+    "No Matching Flight" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "errorCode" :
+        {
+          "type" : "integer",
+          "description" : "Error Code"
+        },
+        "errorDesc" :
+        {
+          "type" : "string",
+          "description" : "Error Description",
+          "maxLength" : 100
+        }
+      },
+      "required" :
+      [
+        "errorCode",
+        "errorDesc"
+      ]
+    },
+    "Model 11" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "airlineCustomerValue" :
+        {
+          "type" : "string",
+          "description" : "Airline customer value (QFF only)",
+          "maxLength" : 18
+        },
+        "otherAirlineSchemeCount" :
+        {
+          "type" : "integer",
+          "description" : "Other Airline Scheme Count"
+        },
+        "randomFFNo" :
+        {
+          "type" : "string",
+          "description" : "random Frequent Flyer number, min 10 digits (left padded with 0s if required)",
+          "minLength" : 10,
+          "maxLength" : 24
+        },
+        "qfMemberTierClubCode" :
+        {
+          "type" : "string",
+          "description" : "QFF Tier Club Code",
+          "maxLength" : 4
+        },
+        "complaintCount" :
+        {
+          "type" : "integer",
+          "description" : "Complaint Count"
+        },
+        "serviceFailureCount" :
+        {
+          "type" : "integer",
+          "description" : "Service Failure Count"
+        },
+        "surpriseDelightCount" :
+        {
+          "type" : "integer",
+          "description" : "Surprise Delight Count"
+        },
+        "mishandledBagCount" :
+        {
+          "type" : "integer",
+          "description" : "Mishandled Bag Count"
+        },
+        "flightCancellationCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Cancellation Count"
+        },
+        "flightDelayDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Delay Domestic Count"
+        },
+        "flightDelayInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Delay International Count"
+        },
+        "flightUpgradeDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Upgrade Domestic Count"
+        },
+        "flightUpgradeInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Upgrade International Count"
+        },
+        "flightDowngradeDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Downgrade Domestic Count"
+        },
+        "flightDowngradeInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Downgrade International Count"
+        },
+        "flightSegmentCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Segment Count"
+        },
+        "lastUpdatedTimestamp" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Last Updated in Database in format %Y-%m-%d %H(colon)%i(colon)%s"
+        },
+        "summaryCommentText" :
+        {
+          "type" : "string",
+          "description" : "Summary Comment Text",
+          "maxLength" : 200
+        },
+        "randomUniqueID" :
+        {
+          "type" : "string",
+          "description" : "Unique Consolidated Customer ID for FF/non-FF Customers",
+          "maxLength" : 24
+        },
+        "majorityQCI" :
+        {
+          "type" : "string",
+          "description" : "Majority random Corporate Indicator",
+          "maxLength" : 3
+        },
+        "majorCorpCountryCode" :
+        {
+          "type" : "string",
+          "description" : "Majority Coporation Country Code",
+          "maxLength" : 4
+        },
+        "majorCorpBCI" :
+        {
+          "type" : "string",
+          "description" : "Majority British Airways Corporate Indicator",
+          "maxLength" : 7
+        },
+        "majorCorpACI" :
+        {
+          "type" : "string",
+          "description" : "Majority ACI",
+          "maxLength" : 7
+        },
+        "majorCorpOCI" :
+        {
+          "type" : "string",
+          "description" : "Majority Other Corporate Indicator",
+          "maxLength" : 7
+        },
+        "majorCorpName" :
+        {
+          "type" : "string",
+          "description" : "Majority Corporation Name",
+          "maxLength" : 70
+        },
+        "majorCorpAltName" :
+        {
+          "type" : "string",
+          "description" : "Majority Corporation Alternative Name",
+          "maxLength" : 70
+        }
+      },
+      "required" :
+      [
+        "airlineCustomerValue",
+        "otherAirlineSchemeCount",
+        "randomFFNo",
+        "qfMemberTierClubCode",
+        "complaintCount",
+        "serviceFailureCount",
+        "surpriseDelightCount",
+        "mishandledBagCount",
+        "flightCancellationCount",
+        "flightDelayDomesticCount",
+        "flightDelayInternationalCount",
+        "flightUpgradeDomesticCount",
+        "flightUpgradeInternationalCount",
+        "flightDowngradeDomesticCount",
+        "flightDowngradeInternationalCount",
+        "flightSegmentCount",
+        "lastUpdatedTimestamp",
+        "summaryCommentText",
+        "randomUniqueID",
+        "majorityQCI",
+        "majorCorpCountryCode",
+        "majorCorpBCI",
+        "majorCorpACI",
+        "majorCorpOCI",
+        "majorCorpName",
+        "majorCorpAltName"
+      ]
+    },
+    "FF Forward bookings lookup" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "abn" :
+        {
+          "type" : "string",
+          "description" : "Australian Business Number. Exactly 11 decimal digits",
+          "minLength" : 11,
+          "maxLength" : 11,
+          "pattern" : "^\\d+$"
+        },
+        "fromTimestamp" :
+        {
+          "type" : "integer",
+          "description" : "Query will run from and inclusive of fromTimestamp. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)). Must be a multiple of 1000 (i.e. to nearest second)",
+          "default" : 1502755200000,
+          "minimum" : 1,
+          "maximum" : 2147483647000,
+          "x-constraint" :
+          {
+            "multiple" : 1000
+          }
+        },
+        "toTimestamp" :
+        {
+          "type" : "integer",
+          "description" : "Query will run up and inclusive of toTimestamp. Should be greater than or equal to fromTimestamp. Default to current times timestamp converted to a UTC date with time midnight (000000) + 1 year. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)). Must be a multiple of 1000 (i.e. to nearest second)",
+          "default" : 1534291200000,
+          "minimum" : 1,
+          "maximum" : 2147483647000,
+          "x-constraint" :
+          {
+            "multiple" : 1000
+          }
+        },
+        "productsPerPage" :
+        {
+          "type" : "integer",
+          "description" : "Ideal number of records to be returned per page",
+          "default" : 20,
+          "minimum" : 1,
+          "maximum" : 1000
+        },
+        "version" :
+        {
+          "type" : "number",
+          "description" : "API version",
+          "enum" :
+          [
+            1
+          ]
+        }
+      },
+      "required" :
+      [
+        "system",
+        "abn",
+        "version"
+      ]
+    },
+    "firstPassenger" :
+    {
+      "type" : "object",
+      "description" : "Lead passenger in booking, ordered by pax tattoo and ABN presence - having ABN ordered before not having ABN",
+      "properties" :
+      {
+        "passengerTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a passenger"
+        },
+        "prefix" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name prefix, e.g. Mr, Mrs",
+          "maxLength" : 12
+        },
+        "firstName" :
+        {
+          "type" : "string",
+          "description" : "Passenger first name",
+          "maxLength" : 56
+        },
+        "surName" :
+        {
+          "type" : "string",
+          "description" : "Passenger last name",
+          "maxLength" : 57
+        },
+        "ffNo" :
+        {
+          "type" : "string",
+          "description" : "Frequent flyer number, min 10 digits for QFF (left padded with 0s if required)",
+          "maxLength" : 16
+        },
+        "ffScheme" :
+        {
+          "type" : "string",
+          "description" : "Frequent flyer scheme code",
+          "maxLength" : 3
+        }
+      },
+      "required" :
+      [
+        "passengerTattoo",
+        "prefix",
+        "firstName",
+        "surName"
+      ]
+    },
+    "Model 12" :
+    {
+      "type" : "object",
+      "description" : "Car booking",
+      "properties" :
+      {
+        "pnr" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name Record, e.g. 2C8HZU",
+          "minLength" : 6,
+          "maxLength" : 6
+        },
+        "travelPlanID" :
+        {
+          "type" : "string",
+          "description" : "Travel plan ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "bookingID" :
+        {
+          "type" : "string",
+          "description" : "Booking ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "pnrCreationDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Booking creation Date, YYYY-MM-DD, e.g. 2017-01-18"
+        },
+        "paxQuantity" :
+        {
+          "type" : "integer",
+          "description" : "PNR Passenger count",
+          "minimum" : 1,
+          "maximum" : 90
+        },
+        "firstPassenger" :
+        {
+          "$ref" : "#/definitions/firstPassenger"
+        },
+        "timestamp" :
+        {
+          "type" : "integer",
+          "description" : "timestamp representing Pick up date and time of car (UTC) (mandatory). Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "type" :
+        {
+          "type" : "string",
+          "description" : "Type of object",
+          "enum" :
+          [
+            "car"
+          ]
+        },
+        "carModelDesc" :
+        {
+          "type" : "string",
+          "description" : "Car model type, e.g. NISSAN MICRA/SIMILAR",
+          "maxLength" : 70
+        },
+        "carCompanyCode" :
+        {
+          "type" : "string",
+          "description" : "Car company code, e.g. ZD",
+          "maxLength" : 3
+        },
+        "carCompanyName" :
+        {
+          "type" : "string",
+          "description" : "Car company name, e.g. BUDGET",
+          "maxLength" : 35
+        },
+        "carReservationNo" :
+        {
+          "type" : "string",
+          "description" : "Car company reservation number, e.g. 44694437AU4",
+          "maxLength" : 20
+        },
+        "pickUpDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Pick up date of car (local), YYYY-MM-DD, e.g. 2017-08-03"
+        },
+        "pickUpUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Pick up date of car (UTC), YYYY-MM-DD, e.g. 2017-08-03"
+        },
+        "pickUpTime" :
+        {
+          "type" : "string",
+          "description" : "Pick up time of car (local) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "pickUpUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Pick up time of car (UTC) hh:mm:ss (24 hour time), e.g. \"00:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "pickUpLocation" :
+        {
+          "type" : "string",
+          "description" : "Pick up location, e.g. SYD",
+          "maxLength" : 4
+        },
+        "dropOffDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Drop off date of car (local), YYYY-MM-DD, e.g. 2017-08-10"
+        },
+        "dropOffUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Drop off date of car (UTC), YYYY-MM-DD, e.g. 2017-08-10"
+        },
+        "dropOffTime" :
+        {
+          "type" : "string",
+          "description" : "Drop off time of car (local) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "dropOffUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Drop off time of car (UTC) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        }
+      },
+      "required" :
+      [
+        "pnr",
+        "travelPlanID",
+        "bookingID",
+        "pnrCreationDate",
+        "paxQuantity",
+        "timestamp",
+        "type",
+        "carModelDesc",
+        "carCompanyCode",
+        "carCompanyName",
+        "carReservationNo",
+        "pickUpDate",
+        "pickUpUTCDate",
+        "pickUpTime",
+        "pickUpUTCTime",
+        "pickUpLocation",
+        "dropOffDate",
+        "dropOffUTCDate",
+        "dropOffTime",
+        "dropOffUTCTime"
+      ]
+    },
+    "product" :
+    {
+      "type" : "array",
+      "description" : "Forward booked products, ordered in ascending chronological order by timestamp, then by type in the order of: flight, car, gift, credit",
+      "minItems" : 1,
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 12",
+        "x-alternatives" :
+        [
+          {
+            "$ref" : "#/x-alt-definitions/Model 1",
+            "type" : "object"
+          },
+          {
+            "$ref" : "#/x-alt-definitions/Model 3",
+            "type" : "object"
+          },
+          {
+            "$ref" : "#/x-alt-definitions/Model 4",
+            "type" : "object"
+          },
+          {
+            "$ref" : "#/x-alt-definitions/Model 5",
+            "type" : "object"
+          }
+        ]
+      }
+    },
+    "Product bookings found for ffNo between fromTimestamp and toTimestamp (inclusive)" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "product" :
+        {
+          "$ref" : "#/definitions/product"
+        },
+        "checkpoint" :
+        {
+          "type" : "integer",
+          "description" : "Present if further product records exist for the ff No for the input fromTimestamp and toTimestamp parameters, the next request should have fromTimestamp = checkpoint. If not present this means no further pages. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 1,
+          "maximum" : 2147483647000,
+          "x-constraint" :
+          {
+            "multiple" : 1000
+          }
+        }
+      },
+      "required" :
+      [
+        "product"
+      ]
+    },
+    "Products not found error" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "errorCode" :
+        {
+          "type" : "integer",
+          "description" : "Error Code"
+        },
+        "errorDesc" :
+        {
+          "type" : "string",
+          "description" : "Error Description",
+          "maxLength" : 100
+        }
+      },
+      "required" :
+      [
+        "errorCode",
+        "errorDesc"
+      ]
+    },
+    "Model 13" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "ffNo" :
+        {
+          "type" : "string",
+          "description" : "random Frequent Flyer number (non padded & 7/10-digit (zero padded) FF numbers accepted)",
+          "maxLength" : 24,
+          "pattern" : "^[0-9]+$"
+        },
+        "fromTimestamp" :
+        {
+          "type" : "integer",
+          "description" : "Query will run from and inclusive of fromTimestamp. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)). Must be a multiple of 1000 (i.e. to nearest second)",
+          "default" : 1502755200000,
+          "minimum" : 1,
+          "maximum" : 2147483647000,
+          "x-constraint" :
+          {
+            "multiple" : 1000
+          }
+        },
+        "toTimestamp" :
+        {
+          "type" : "integer",
+          "description" : "Query will run up and inclusive of toTimestamp. Should be greater than or equal to fromTimestamp. Default to current times timestamp converted to a UTC date with time midnight (000000) + 1 year. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)). Must be a multiple of 1000 (i.e. to nearest second)",
+          "default" : 1534291200000,
+          "minimum" : 1,
+          "maximum" : 2147483647000,
+          "x-constraint" :
+          {
+            "multiple" : 1000
+          }
+        },
+        "productsPerPage" :
+        {
+          "type" : "integer",
+          "description" : "Ideal number of records to be returned per page",
+          "default" : 20,
+          "minimum" : 1,
+          "maximum" : 1000
+        },
+        "version" :
+        {
+          "type" : "number",
+          "description" : "API version",
+          "enum" :
+          [
+            1
+          ]
+        }
+      },
+      "required" :
+      [
+        "system",
+        "ffNo",
+        "version"
+      ]
+    },
+    "Model 14" :
+    {
+      "type" : "object",
+      "description" : "Car booking",
+      "properties" :
+      {
+        "pnr" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name Record, e.g. 2C8HZU",
+          "minLength" : 6,
+          "maxLength" : 6
+        },
+        "travelPlanID" :
+        {
+          "type" : "string",
+          "description" : "Travel plan ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "bookingID" :
+        {
+          "type" : "string",
+          "description" : "Booking ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "pnrCreationDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Booking creation Date, YYYY-MM-DD, e.g. 2017-01-18"
+        },
+        "timestamp" :
+        {
+          "type" : "integer",
+          "description" : "timestamp representing Pick up date and time of car (UTC) (mandatory). Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "type" :
+        {
+          "type" : "string",
+          "description" : "Type of object",
+          "enum" :
+          [
+            "car"
+          ]
+        },
+        "carModelDesc" :
+        {
+          "type" : "string",
+          "description" : "Car model type, e.g. NISSAN MICRA/SIMILAR",
+          "maxLength" : 70
+        },
+        "carCompanyCode" :
+        {
+          "type" : "string",
+          "description" : "Car company code, e.g. ZD",
+          "maxLength" : 3
+        },
+        "carCompanyName" :
+        {
+          "type" : "string",
+          "description" : "Car company name, e.g. BUDGET",
+          "maxLength" : 35
+        },
+        "carReservationNo" :
+        {
+          "type" : "string",
+          "description" : "Car company reservation number, e.g. 44694437AU4",
+          "maxLength" : 20
+        },
+        "pickUpDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Pick up date of car (local), YYYY-MM-DD, e.g. 2017-08-03"
+        },
+        "pickUpUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Pick up date of car (UTC), YYYY-MM-DD, e.g. 2017-08-03"
+        },
+        "pickUpTime" :
+        {
+          "type" : "string",
+          "description" : "Pick up time of car (local) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "pickUpUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Pick up time of car (UTC) hh:mm:ss (24 hour time), e.g. \"00:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "pickUpLocation" :
+        {
+          "type" : "string",
+          "description" : "Pick up location, e.g. SYD",
+          "maxLength" : 4
+        },
+        "dropOffDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Drop off date of car (local), YYYY-MM-DD, e.g. 2017-08-10"
+        },
+        "dropOffUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Drop off date of car (UTC), YYYY-MM-DD, e.g. 2017-08-10"
+        },
+        "dropOffTime" :
+        {
+          "type" : "string",
+          "description" : "Drop off time of car (local) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "dropOffUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Drop off time of car (UTC) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        }
+      },
+      "required" :
+      [
+        "pnr",
+        "travelPlanID",
+        "bookingID",
+        "pnrCreationDate",
+        "timestamp",
+        "type",
+        "carModelDesc",
+        "carCompanyCode",
+        "carCompanyName",
+        "carReservationNo",
+        "pickUpDate",
+        "pickUpUTCDate",
+        "pickUpTime",
+        "pickUpUTCTime",
+        "pickUpLocation",
+        "dropOffDate",
+        "dropOffUTCDate",
+        "dropOffTime",
+        "dropOffUTCTime"
+      ]
+    },
+    "Model 15" :
+    {
+      "type" : "array",
+      "description" : "Forward booked products, ordered in ascending chronological order by timestamp, then by type in the order of: flight, car, gift, credit",
+      "minItems" : 1,
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 14",
+        "x-alternatives" :
+        [
+          {
+            "$ref" : "#/x-alt-definitions/Model 6",
+            "type" : "object"
+          },
+          {
+            "$ref" : "#/x-alt-definitions/Model 7",
+            "type" : "object"
+          },
+          {
+            "$ref" : "#/x-alt-definitions/Model 8",
+            "type" : "object"
+          },
+          {
+            "$ref" : "#/x-alt-definitions/Model 9",
+            "type" : "object"
+          }
+        ]
+      }
+    },
+    "Model 16" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "product" :
+        {
+          "$ref" : "#/definitions/Model 15"
+        },
+        "checkpoint" :
+        {
+          "type" : "integer",
+          "description" : "Present if further product records exist for the ff No for the input fromTimestamp and toTimestamp parameters, the next request should have fromTimestamp = checkpoint. If not present this means no further pages. Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 1,
+          "maximum" : 2147483647000,
+          "x-constraint" :
+          {
+            "multiple" : 1000
+          }
+        }
+      },
+      "required" :
+      [
+        "product"
+      ]
+    },
+    "Model 17" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "customerValueRanking" :
+        {
+          "type" : "integer",
+          "description" : "Customer value ranking (QFF only)"
+        },
+        "airlineCustomerValue" :
+        {
+          "type" : "string",
+          "description" : "Airline customer value (QFF only)",
+          "maxLength" : 18
+        },
+        "otherAirlineSchemeCount" :
+        {
+          "type" : "integer",
+          "description" : "Other Airline Scheme Count"
+        },
+        "randomFFNo" :
+        {
+          "type" : "string",
+          "description" : "random Frequent Flyer number, min 10 digits (left padded with 0s if required)",
+          "minLength" : 10,
+          "maxLength" : 24
+        },
+        "qfMemberAirlinePriorityLevel" :
+        {
+          "type" : "string",
+          "description" : "QFF Airline Priority Level",
+          "maxLength" : 4
+        },
+        "qfMemberTierClubCode" :
+        {
+          "type" : "string",
+          "description" : "QFF Tier Club Code",
+          "maxLength" : 4
+        },
+        "complaintCount" :
+        {
+          "type" : "integer",
+          "description" : "Complaint Count"
+        },
+        "serviceFailureCount" :
+        {
+          "type" : "integer",
+          "description" : "Service Failure Count"
+        },
+        "surpriseDelightCount" :
+        {
+          "type" : "integer",
+          "description" : "Surprise Delight Count"
+        },
+        "mishandledBagCount" :
+        {
+          "type" : "integer",
+          "description" : "Mishandled Bag Count"
+        },
+        "flightCancellationCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Cancellation Count"
+        },
+        "flightDelayDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Delay Domestic Count"
+        },
+        "flightDelayInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Delay International Count"
+        },
+        "flightUpgradeDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Upgrade Domestic Count"
+        },
+        "flightUpgradeInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Upgrade International Count"
+        },
+        "flightDowngradeDomesticCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Downgrade Domestic Count"
+        },
+        "flightDowngradeInternationalCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Downgrade International Count"
+        },
+        "flightSegmentCount" :
+        {
+          "type" : "integer",
+          "description" : "Flight Segment Count"
+        },
+        "lastUpdatedTimestamp" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Last Updated in Database in format %Y-%m-%d %H(colon)%i(colon)%s"
+        },
+        "summaryCommentText" :
+        {
+          "type" : "string",
+          "description" : "Summary Comment Text",
+          "maxLength" : 200
+        },
+        "randomUniqueID" :
+        {
+          "type" : "string",
+          "description" : "Unique Consolidated Customer ID for FF/non-FF Customers",
+          "maxLength" : 24
+        },
+        "majorityQCI" :
+        {
+          "type" : "string",
+          "description" : "Majority random Corporate Indicator",
+          "maxLength" : 3
+        },
+        "majorCorpCountryCode" :
+        {
+          "type" : "string",
+          "description" : "Majority Coporation Country Code",
+          "maxLength" : 4
+        },
+        "majorCorpBCI" :
+        {
+          "type" : "string",
+          "description" : "Majority British Airways Corporate Indicator",
+          "maxLength" : 7
+        },
+        "majorCorpACI" :
+        {
+          "type" : "string",
+          "description" : "Majority ACI",
+          "maxLength" : 7
+        },
+        "majorCorpOCI" :
+        {
+          "type" : "string",
+          "description" : "Majority Other Corporate Indicator",
+          "maxLength" : 7
+        },
+        "majorCorpName" :
+        {
+          "type" : "string",
+          "description" : "Majority Corporation Name",
+          "maxLength" : 70
+        },
+        "majorCorpAltName" :
+        {
+          "type" : "string",
+          "description" : "Majority Corporation Alternative Name",
+          "maxLength" : 70
+        }
+      },
+      "required" :
+      [
+        "customerValueRanking",
+        "airlineCustomerValue",
+        "otherAirlineSchemeCount",
+        "randomFFNo",
+        "qfMemberAirlinePriorityLevel",
+        "qfMemberTierClubCode",
+        "complaintCount",
+        "serviceFailureCount",
+        "surpriseDelightCount",
+        "mishandledBagCount",
+        "flightCancellationCount",
+        "flightDelayDomesticCount",
+        "flightDelayInternationalCount",
+        "flightUpgradeDomesticCount",
+        "flightUpgradeInternationalCount",
+        "flightDowngradeDomesticCount",
+        "flightDowngradeInternationalCount",
+        "flightSegmentCount",
+        "lastUpdatedTimestamp",
+        "summaryCommentText",
+        "randomUniqueID",
+        "majorityQCI",
+        "majorCorpCountryCode",
+        "majorCorpBCI",
+        "majorCorpACI",
+        "majorCorpOCI",
+        "majorCorpName",
+        "majorCorpAltName"
+      ]
+    },
+    "Model 18" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling systemId",
+          "minLength" : 1,
+          "maxLength" : 500,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "randomFFNo" :
+        {
+          "type" : "string",
+          "description" : "random Frequent Flyer number (non padded & 7/10-digit (zero padded) FF numbers accepted)",
+          "maxLength" : 24,
+          "pattern" : "^[0-9]+$"
+        },
+        "firstName" :
+        {
+          "type" : "string",
+          "description" : "Given Name",
+          "minLength" : 1,
+          "maxLength" : 60
+        },
+        "surName" :
+        {
+          "type" : "string",
+          "description" : "Surname",
+          "minLength" : 1,
+          "maxLength" : 60
+        },
+        "version" :
+        {
+          "type" : "string",
+          "description" : "API version",
+          "maxLength" : 10,
+          "pattern" : "^1\\.0"
+        }
+      },
+      "required" :
+      [
+        "system",
+        "randomFFNo",
+        "version"
+      ]
+    },
+    "Flight Passengers Products" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "departureDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Original departure date of flight (local), e.g. 2016-12-26"
+        },
+        "carrier" :
+        {
+          "type" : "string",
+          "description" : "Operational Carrier e.g. QF",
+          "minLength" : 1,
+          "maxLength" : 2,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "flightNo" :
+        {
+          "type" : "string",
+          "description" : "Operational Flight number e.g. 0401",
+          "minLength" : 4,
+          "maxLength" : 4,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "suffix" :
+        {
+          "type" : "string",
+          "description" : "Operational Suffix indicating delay, e.g. X",
+          "maxLength" : 1,
+          "pattern" : "^[A-Z]+$"
+        },
+        "departurePort" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "arrivalPort" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. DXB",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "version" :
+        {
+          "type" : "number",
+          "description" : "API version",
+          "enum" :
+          [
+            1
+          ]
+        },
+        "pageNo" :
+        {
+          "type" : "integer",
+          "description" : "Page number of passengers to return, default is 1 (first page of passengers results)",
+          "default" : 1,
+          "minimum" : 1
+        },
+        "passengersPerPage" :
+        {
+          "type" : "integer",
+          "description" : "Ideal number of records to be returned per page",
+          "default" : 100,
+          "minimum" : 1,
+          "maximum" : 1000
+        }
+      },
+      "required" :
+      [
+        "system",
+        "departureDate",
+        "carrier",
+        "flightNo",
+        "departurePort",
+        "version"
+      ]
+    },
+    "Model 19" :
+    {
+      "type" : "object",
+      "description" : "Flight details",
+      "properties" :
+      {
+        "carrier" :
+        {
+          "type" : "string",
+          "description" : "Operational Carrier e.g. QF",
+          "minLength" : 1,
+          "maxLength" : 2,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "flightNo" :
+        {
+          "type" : "string",
+          "description" : "Operational Flight number e.g. 0401",
+          "minLength" : 4,
+          "maxLength" : 4,
+          "pattern" : "^[0-9]+$"
+        },
+        "departureDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Original departure date of flight (local), e.g. 2016-12-26"
+        },
+        "suffix" :
+        {
+          "type" : "string",
+          "description" : "Operational Suffix indicating delay, e.g. X",
+          "maxLength" : 1,
+          "pattern" : "^[A-Z]+$"
+        },
+        "departurePort" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "arrivalPort" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. DXB",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        }
+      },
+      "required" :
+      [
+        "carrier",
+        "flightNo",
+        "departureDate",
+        "departurePort"
+      ]
+    },
+    "Model 20" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 19"
+      }
+    },
+    "Model 21" :
+    {
+      "type" : "object",
+      "description" : "list of flight segments for this passenger",
+      "properties" :
+      {
+        "airSegmentId" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a flight in a booking"
+        },
+        "marketingCarrierCode" :
+        {
+          "type" : "string",
+          "description" : "Marketing Carrier Eg: QF, EK",
+          "maxLength" : 4
+        },
+        "marketingFlightNo" :
+        {
+          "type" : "string",
+          "description" : "Marketing Flight Number Eg: 0001, 0410",
+          "minLength" : 4,
+          "maxLength" : 4
+        },
+        "marketingFlightSuffix" :
+        {
+          "type" : "string",
+          "description" : "Marketing Flight Number Suffix Eg: A, X",
+          "minLength" : 1,
+          "maxLength" : 1,
+          "pattern" : "^[A-Z]$"
+        },
+        "departureLocalDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Departure date of flight segment (local), e.g. 2016-12-26"
+        },
+        "departureUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Departure date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "departureLocalTime" :
+        {
+          "type" : "string",
+          "description" : "Departure time of flight segment (local), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "departureUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Departure time of flight segment (UTC), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "depatureAirportCode" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "departureAirportName" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Name, e.g. Sydney"
+        },
+        "arrivalLocalDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Arrival date of flight segment (local), e.g. 2016-12-26"
+        },
+        "arrivalUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Arrival date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "arrivalLocalTime" :
+        {
+          "type" : "string",
+          "description" : "Arrival time of flight segment (local), e.g. HH:MM:SS",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "arrivalUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Arrival time of flight segment (UTC), e.g. HH:MM:SS",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "arrivalAirportCode" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "arrivalAirportName" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Name, e.g. Melbourne"
+        },
+        "operatingCarrierCode" :
+        {
+          "type" : "string",
+          "description" : "Operating Carrier Eg: QF, EK",
+          "maxLength" : 4
+        },
+        "operatingFlightNo" :
+        {
+          "type" : "string",
+          "description" : "Operating Flight Number Eg: 0001, 0410",
+          "minLength" : 4,
+          "maxLength" : 4,
+          "pattern" : "^[0-9]+$"
+        },
+        "operatingFlightSuffix" :
+        {
+          "type" : "string",
+          "description" : "Operating Flight Number Suffix Eg: A, X",
+          "minLength" : 1,
+          "maxLength" : 1,
+          "pattern" : "^[A-Z]$"
+        },
+        "reservationStatus" :
+        {
+          "type" : "string",
+          "description" : "Reservation status, e.g. HK, Confirmed, Waitlisted",
+          "maxLength" : 2
+        }
+      },
+      "required" :
+      [
+        "airSegmentId",
+        "marketingCarrierCode",
+        "marketingFlightNo",
+        "departureLocalDate",
+        "departureUTCDate",
+        "departureLocalTime",
+        "departureUTCTime",
+        "depatureAirportCode",
+        "departureAirportName",
+        "arrivalLocalDate",
+        "arrivalUTCDate",
+        "arrivalLocalTime",
+        "arrivalUTCTime",
+        "arrivalAirportCode",
+        "arrivalAirportName",
+        "operatingCarrierCode",
+        "operatingFlightNo",
+        "reservationStatus"
+      ]
+    },
+    "airSegments" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 21"
+      }
+    },
+    "Model 22" :
+    {
+      "type" : "object",
+      "description" : "list of vehicle segments for this passenger",
+      "properties" :
+      {
+        "vehicleSegmentId" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a vechile in a booking"
+        },
+        "companyCode" :
+        {
+          "type" : "string",
+          "description" : "Car company code, e.g. ZD",
+          "maxLength" : 3
+        },
+        "companyName" :
+        {
+          "type" : "string",
+          "description" : "Car company name, e.g. BUDGET",
+          "maxLength" : 35
+        },
+        "pickUpDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Pick up date of car (local), YYYY-MM-DD, e.g. 2017-08-03"
+        },
+        "pickUpTime" :
+        {
+          "type" : "string",
+          "description" : "Pick up time of car (local) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "pickupCityCode" :
+        {
+          "type" : "string",
+          "description" : "Pick up location, e.g. SYD",
+          "maxLength" : 4
+        },
+        "dropOffDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Drop off date of car (local), YYYY-MM-DD, e.g. 2017-08-10"
+        },
+        "dropOffTime" :
+        {
+          "type" : "string",
+          "description" : "Drop off time of car (local) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "reservationStatus" :
+        {
+          "type" : "string",
+          "description" : "Reservation status, e.g. HK, Confirmed, Waitlisted",
+          "maxLength" : 2
+        }
+      },
+      "required" :
+      [
+        "vehicleSegmentId",
+        "companyCode",
+        "companyName",
+        "pickUpDate",
+        "pickUpTime",
+        "pickupCityCode",
+        "dropOffDate",
+        "dropOffTime",
+        "reservationStatus"
+      ]
+    },
+    "vehicleSegments" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 22"
+      }
+    },
+    "Model 23" :
+    {
+      "type" : "object",
+      "description" : "list of passengers in this flight",
+      "properties" :
+      {
+        "passengerId" :
+        {
+          "type" : "string",
+          "description" : "A Reference number assigned by System to a passenger",
+          "maxLength" : 20
+        },
+        "bookingId" :
+        {
+          "type" : "string",
+          "description" : "Booking ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "airSegments" :
+        {
+          "$ref" : "#/definitions/airSegments"
+        },
+        "vehicleSegments" :
+        {
+          "$ref" : "#/definitions/vehicleSegments"
+        }
+      },
+      "required" :
+      [
+        "passengerId",
+        "bookingId",
+        "airSegments",
+        "vehicleSegments"
+      ]
+    },
+    "Model 24" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 23"
+      }
+    },
+    "Model 25" :
+    {
+      "type" : "object",
+      "description" : "Flight details",
+      "properties" :
+      {
+        "flight" :
+        {
+          "$ref" : "#/definitions/Model 20"
+        },
+        "passenger" :
+        {
+          "$ref" : "#/definitions/Model 24"
+        },
+        "nextPageNo" :
+        {
+          "type" : "integer",
+          "description" : "Present if further pages exist that should be queried with the bookingPage set to this value. If not present it means no further pages need to be retrieved",
+          "minimum" : 1
+        }
+      },
+      "required" :
+      [
+        "flight",
+        "passenger"
+      ]
+    },
+    "Model 26" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 25"
+      }
+    },
+    "Model 27" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "product" :
+        {
+          "$ref" : "#/definitions/Model 26"
+        }
+      },
+      "required" :
+      [
+        "product"
+      ]
+    },
+    "Model 28" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "version" :
+        {
+          "type" : "number",
+          "description" : "API version",
+          "enum" :
+          [
+            1
+          ]
+        },
+        "carrier" :
+        {
+          "type" : "string",
+          "description" : "Operational Carrier e.g. QF",
+          "minLength" : 1,
+          "maxLength" : 2,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "flightNo" :
+        {
+          "type" : "string",
+          "description" : "Operational Flight number e.g. 0401",
+          "minLength" : 4,
+          "maxLength" : 4,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "departureDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Original departure date of flight (local), e.g. 2016-12-26"
+        },
+        "departurePort" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "arrivalPort" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. DXB",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "suffix" :
+        {
+          "type" : "string",
+          "description" : "Operational Suffix indicating delay, e.g. X",
+          "maxLength" : 1,
+          "pattern" : "^[A-Z]+$"
+        },
+        "pageNo" :
+        {
+          "type" : "string",
+          "description" : "Page Number",
+          "minLength" : 1,
+          "maxLength" : 4,
+          "pattern" : "^[0-9]+$"
+        },
+        "productPerPage" :
+        {
+          "type" : "string",
+          "description" : "Page Limit",
+          "minLength" : 1,
+          "maxLength" : 4,
+          "pattern" : "^[0-9]+$"
+        }
+      },
+      "required" :
+      [
+        "system",
+        "version",
+        "carrier",
+        "flightNo",
+        "departureDate",
+        "departurePort"
+      ]
+    },
+    "Flight" :
+    {
+      "type" : "object",
+      "description" : "Flight Details",
+      "properties" :
+      {
+        "carrier" :
+        {
+          "type" : "string",
+          "description" : "Operational Carrier e.g. QF",
+          "minLength" : 1,
+          "maxLength" : 2,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "flightNo" :
+        {
+          "type" : "string",
+          "description" : "Operational Flight number e.g. 0401",
+          "minLength" : 4,
+          "maxLength" : 4,
+          "pattern" : "^[0-9]+$"
+        },
+        "departureDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Original departure date of flight (local), e.g. 2016-12-26"
+        },
+        "departurePort" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "arrivalPort" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. DXB",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "suffix" :
+        {
+          "type" : "string",
+          "description" : "Operational Suffix indicating delay, e.g. X",
+          "maxLength" : 1,
+          "pattern" : "^[A-Z]+$"
+        }
+      },
+      "required" :
+      [
+        "carrier",
+        "flightNo",
+        "departureDate",
+        "departurePort"
+      ]
+    },
+    "Model 29" :
+    {
+      "type" : "object",
+      "description" : "Meal Deatils",
+      "properties" :
+      {
+        "otherTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a meal service in a booking"
+        },
+        "keyword" :
+        {
+          "type" : "string",
+          "description" : "SSR's Code",
+          "maxLength" : 10
+        },
+        "keywordSource" :
+        {
+          "type" : "string",
+          "description" : "Type of service request either SSR/SK",
+          "maxLength" : 10
+        },
+        "carrierCode" :
+        {
+          "type" : "string",
+          "description" : "Airline carrier code",
+          "maxLength" : 10
+        },
+        "status" :
+        {
+          "type" : "string",
+          "description" : "Special Request status ",
+          "maxLength" : 10
+        },
+        "paxSegRelType" :
+        {
+          "type" : "string",
+          "description" : "Passenger segment relationship type",
+          "maxLength" : 10
+        },
+        "chargeableInd" :
+        {
+          "type" : "string",
+          "description" : "Chargable indicator",
+          "maxLength" : 10
+        },
+        "rfic" :
+        {
+          "type" : "string",
+          "description" : "Service Group code",
+          "maxLength" : 20
+        },
+        "rfisc" :
+        {
+          "type" : "string",
+          "description" : "Service Group Sub code",
+          "maxLength" : 20
+        },
+        "freeText" :
+        {
+          "type" : "string",
+          "description" : "Free Text column",
+          "maxLength" : 20
+        }
+      },
+      "required" :
+      [
+        "otherTattoo"
+      ]
+    },
+    "mealService" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 29"
+      }
+    },
+    "Model 30" :
+    {
+      "type" : "object",
+      "description" : "Baggage Service Details",
+      "properties" :
+      {
+        "otherTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a baggage service in a booking"
+        },
+        "keyword" :
+        {
+          "type" : "string",
+          "description" : "SSR's Code",
+          "maxLength" : 10
+        },
+        "keywordSource" :
+        {
+          "type" : "string",
+          "description" : "Type of service request either SSR/SK",
+          "maxLength" : 10
+        },
+        "carrierCode" :
+        {
+          "type" : "string",
+          "description" : "Airline carrier code",
+          "maxLength" : 10
+        },
+        "status" :
+        {
+          "type" : "string",
+          "description" : "Special Request status ",
+          "maxLength" : 10
+        },
+        "paxSegRelType" :
+        {
+          "type" : "string",
+          "description" : "Passenger segment relationship type",
+          "maxLength" : 10
+        },
+        "chargeableInd" :
+        {
+          "type" : "string",
+          "description" : "Chargable indicator",
+          "maxLength" : 10
+        },
+        "rfrfic" :
+        {
+          "type" : "string",
+          "description" : "Service Group code",
+          "maxLength" : 20
+        },
+        "rfisc" :
+        {
+          "type" : "string",
+          "description" : "Service Group Sub code",
+          "maxLength" : 20
+        },
+        "bagQty" :
+        {
+          "type" : "string",
+          "description" : "Baggage Quantity",
+          "maxLength" : 20
+        },
+        "bagWgt" :
+        {
+          "type" : "string",
+          "description" : "Baggage Weight",
+          "maxLength" : 20
+        },
+        "bagWgtUOMCode" :
+        {
+          "type" : "string",
+          "description" : "Baggage Weight Unit of measurment",
+          "maxLength" : 20
+        },
+        "freeText" :
+        {
+          "type" : "string",
+          "description" : "Free Text column",
+          "maxLength" : 20
+        }
+      },
+      "required" :
+      [
+        "otherTattoo"
+      ]
+    },
+    "baggageService" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 30"
+      }
+    },
+    "Model 31" :
+    {
+      "type" : "object",
+      "description" : "Seat Service Details",
+      "properties" :
+      {
+        "otherTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a seat service in a booking"
+        },
+        "keyword" :
+        {
+          "type" : "string",
+          "description" : "SSR's Code",
+          "maxLength" : 10
+        },
+        "keywordSource" :
+        {
+          "type" : "string",
+          "description" : "Type of service request either SSR/SK",
+          "maxLength" : 10
+        },
+        "carrierCode" :
+        {
+          "type" : "string",
+          "description" : "Airline carrier code",
+          "maxLength" : 10
+        },
+        "status" :
+        {
+          "type" : "string",
+          "description" : "Special Request status ",
+          "maxLength" : 10
+        },
+        "paxSegRelType" :
+        {
+          "type" : "string",
+          "description" : "Passenger segment relationship type",
+          "maxLength" : 10
+        },
+        "docNumber" :
+        {
+          "type" : "string",
+          "description" : "Document Number",
+          "maxLength" : 10
+        },
+        "docTypeCode" :
+        {
+          "type" : "string",
+          "description" : "Document Type Code",
+          "maxLength" : 10
+        },
+        "firstName" :
+        {
+          "type" : "string",
+          "description" : "First Name",
+          "maxLength" : 10
+        },
+        "midName" :
+        {
+          "type" : "string",
+          "description" : "Mid Name",
+          "maxLength" : 10
+        },
+        "lastName" :
+        {
+          "type" : "string",
+          "description" : "Last Name",
+          "maxLength" : 10
+        },
+        "gender" :
+        {
+          "type" : "string",
+          "description" : "Gender",
+          "maxLength" : 10
+        },
+        "birthDate" :
+        {
+          "type" : "string",
+          "description" : "Birth date",
+          "maxLength" : 10
+        },
+        "issueDate" :
+        {
+          "type" : "string",
+          "description" : "Issue Date",
+          "maxLength" : 10
+        },
+        "expiryDate" :
+        {
+          "type" : "string",
+          "description" : "Expiry Date",
+          "maxLength" : 10
+        },
+        "issuePlaceText" :
+        {
+          "type" : "string",
+          "description" : "Issue Place",
+          "maxLength" : 20
+        },
+        "nationality" :
+        {
+          "type" : "string",
+          "description" : "Nationality",
+          "maxLength" : 20
+        },
+        "freeText" :
+        {
+          "type" : "string",
+          "description" : "Free Text column",
+          "maxLength" : 20
+        }
+      },
+      "required" :
+      [
+        "otherTattoo"
+      ]
+    },
+    "documents" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 31"
+      }
+    },
+    "Model 32" :
+    {
+      "type" : "object",
+      "description" : "Documents Service Details",
+      "properties" :
+      {
+        "otherTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a document service in a booking"
+        },
+        "keyword" :
+        {
+          "type" : "string",
+          "description" : "SSR's Code",
+          "maxLength" : 10
+        },
+        "keywordSource" :
+        {
+          "type" : "string",
+          "description" : "Type of service request either SSR/SK",
+          "maxLength" : 10
+        },
+        "carrierCode" :
+        {
+          "type" : "string",
+          "description" : "Airline carrier code",
+          "maxLength" : 10
+        },
+        "status" :
+        {
+          "type" : "string",
+          "description" : "Special Request status ",
+          "maxLength" : 10
+        },
+        "paxSegRelType" :
+        {
+          "type" : "string",
+          "description" : "Passenger segment relationship type",
+          "maxLength" : 10
+        },
+        "chargeableInd" :
+        {
+          "type" : "string",
+          "description" : "Chargable indicator",
+          "maxLength" : 10
+        },
+        "rfic" :
+        {
+          "type" : "string",
+          "description" : "Service Group code",
+          "maxLength" : 10
+        },
+        "rfisc" :
+        {
+          "type" : "string",
+          "description" : "Service Group Sub code",
+          "maxLength" : 10
+        },
+        "specialAsisstancePaxTypeCode" :
+        {
+          "type" : "string",
+          "description" : "Special Assistance",
+          "maxLength" : 10
+        },
+        "seatNumber" :
+        {
+          "type" : "string",
+          "description" : "Seat Number",
+          "maxLength" : 10
+        },
+        "freeText" :
+        {
+          "type" : "string",
+          "description" : "Free Text column",
+          "maxLength" : 20
+        }
+      },
+      "required" :
+      [
+        "otherTattoo"
+      ]
+    },
+    "seatService" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 32"
+      }
+    },
+    "Model 33" :
+    {
+      "type" : "object",
+      "description" : "Other Service Details",
+      "properties" :
+      {
+        "otherTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a other service in a booking"
+        },
+        "keyword" :
+        {
+          "type" : "string",
+          "description" : "SSR's Code",
+          "maxLength" : 10
+        },
+        "keywordSource" :
+        {
+          "type" : "string",
+          "description" : "Type of service request either SSR/SK",
+          "maxLength" : 10
+        },
+        "carrierCode" :
+        {
+          "type" : "string",
+          "description" : "Airline carrier code",
+          "maxLength" : 10
+        },
+        "status" :
+        {
+          "type" : "string",
+          "description" : "Special Request status ",
+          "maxLength" : 10
+        },
+        "paxSegRelType" :
+        {
+          "type" : "string",
+          "description" : "Passenger segment relationship type",
+          "maxLength" : 10
+        },
+        "chargeableInd" :
+        {
+          "type" : "string",
+          "description" : "Chargable indicator",
+          "maxLength" : 10
+        },
+        "rfic" :
+        {
+          "type" : "string",
+          "description" : "Service Group code",
+          "maxLength" : 20
+        },
+        "rfisc" :
+        {
+          "type" : "string",
+          "description" : "Service Group Sub code",
+          "maxLength" : 20
+        },
+        "freeText" :
+        {
+          "type" : "string",
+          "description" : "Free Text column",
+          "maxLength" : 20
+        }
+      },
+      "required" :
+      [
+        "otherTattoo"
+      ]
+    },
+    "otherService" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 33"
+      }
+    },
+    "Model 34" :
+    {
+      "type" : "object",
+      "description" : "Passenger Service request details",
+      "properties" :
+      {
+        "passengerId" :
+        {
+          "type" : "string",
+          "description" : "Passenger Id",
+          "maxLength" : 20
+        },
+        "passengerSegRtId" :
+        {
+          "type" : "string",
+          "description" : "Passenger Segment RT_Id",
+          "maxLength" : 20
+        },
+        "bookingId" :
+        {
+          "type" : "string",
+          "description" : "Booking Id",
+          "maxLength" : 20
+        },
+        "mealService" :
+        {
+          "$ref" : "#/definitions/mealService"
+        },
+        "baggageService" :
+        {
+          "$ref" : "#/definitions/baggageService"
+        },
+        "documents" :
+        {
+          "$ref" : "#/definitions/documents"
+        },
+        "seatService" :
+        {
+          "$ref" : "#/definitions/seatService"
+        },
+        "otherService" :
+        {
+          "$ref" : "#/definitions/otherService"
+        }
+      }
+    },
+    "Model 35" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "Flight" :
+        {
+          "$ref" : "#/definitions/Flight"
+        },
+        "passenger" :
+        {
+          "$ref" : "#/definitions/Model 34"
+        }
+      }
+    },
+    "Model 36" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "system" :
+        {
+          "type" : "string",
+          "description" : "Calling System ID",
+          "minLength" : 1,
+          "pattern" : "^[a-zA-Z0-9_ ]+$"
+        },
+        "version" :
+        {
+          "type" : "number",
+          "description" : "API version",
+          "enum" :
+          [
+            1
+          ]
+        },
+        "carrier" :
+        {
+          "type" : "string",
+          "description" : "Operational Carrier e.g. QF",
+          "minLength" : 1,
+          "maxLength" : 2,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "flightNo" :
+        {
+          "type" : "string",
+          "description" : "Operational Flight number e.g. 0401",
+          "minLength" : 4,
+          "maxLength" : 4,
+          "pattern" : "^[A-Z0-9]+$"
+        },
+        "departureDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Original departure date of flight (local), e.g. 2016-12-26"
+        },
+        "departurePort" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "arrivalPort" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. DXB",
+          "minLength" : 3,
+          "maxLength" : 3,
+          "pattern" : "^[A-Z]+$"
+        },
+        "suffix" :
+        {
+          "type" : "string",
+          "description" : "Operational Suffix indicating delay, e.g. X",
+          "maxLength" : 1,
+          "pattern" : "^[A-Z]+$"
+        },
+        "pageNo" :
+        {
+          "type" : "integer",
+          "description" : "Page Number",
+          "minimum" : 1
+        },
+        "productPerPage" :
+        {
+          "type" : "integer",
+          "description" : "Page Limit",
+          "minimum" : 1
+        }
+      },
+      "required" :
+      [
+        "system",
+        "version",
+        "carrier",
+        "flightNo",
+        "departureDate",
+        "departurePort"
+      ]
+    },
+    "Model 37" :
+    {
+      "type" : "object",
+      "description" : "Email Details",
+      "properties" :
+      {
+        "companyCode" :
+        {
+          "type" : "string",
+          "description" : "company Code",
+          "maxLength" : 10
+        },
+        "cardNo" :
+        {
+          "type" : "string",
+          "description" : "card No",
+          "maxLength" : 10
+        },
+        "tierCode" :
+        {
+          "type" : "string",
+          "description" : "tier Code",
+          "maxLength" : 10
+        },
+        "tierDescriptiion" :
+        {
+          "type" : "string",
+          "description" : "tier Descriptiion",
+          "maxLength" : 10
+        },
+        "allianceCompanyCode" :
+        {
+          "type" : "string",
+          "description" : "alliance Company Code",
+          "maxLength" : 10
+        },
+        "allianceTierCode" :
+        {
+          "type" : "string",
+          "description" : "allianceTierCode",
+          "maxLength" : 10
+        }
+      }
+    },
+    "loyaltyDetails" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 37"
+      }
+    },
+    "Model 38" :
+    {
+      "type" : "object",
+      "description" : "Email Details",
+      "properties" :
+      {
+        "source" :
+        {
+          "type" : "string",
+          "description" : "source",
+          "maxLength" : 10
+        },
+        "usageType" :
+        {
+          "type" : "string",
+          "description" : "usage Type",
+          "maxLength" : 10
+        },
+        "emailAddress" :
+        {
+          "type" : "string",
+          "description" : "email Address",
+          "maxLength" : 20
+        }
+      }
+    },
+    "contactEmail" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "$ref" : "#/definitions/Model 38"
+      }
+    },
+    "Model 39" :
+    {
+      "type" : "object",
+      "description" : "Lead passenger in booking",
+      "properties" :
+      {
+        "passengerId" :
+        {
+          "type" : "string",
+          "description" : "Passenger Id",
+          "maxLength" : 20
+        },
+        "bookingReferenceNumber" :
+        {
+          "type" : "string",
+          "description" : "Booking Reference Number",
+          "maxLength" : 20
+        },
+        "paxTypeCode" :
+        {
+          "type" : "string",
+          "description" : "Passenger Type code",
+          "maxLength" : 20
+        },
+        "acceptanceStatusCode" :
+        {
+          "type" : "string",
+          "description" : "Checkin status",
+          "maxLength" : 20
+        },
+        "boardingStatusCode" :
+        {
+          "type" : "string",
+          "description" : "Boarding status",
+          "maxLength" : 20
+        },
+        "firstName" :
+        {
+          "type" : "string",
+          "description" : "Given Name",
+          "minLength" : 1,
+          "maxLength" : 60
+        },
+        "surName" :
+        {
+          "type" : "string",
+          "description" : "Surname",
+          "minLength" : 1,
+          "maxLength" : 60
+        },
+        "prefix" :
+        {
+          "type" : "string",
+          "description" : "Prefix",
+          "minLength" : 1,
+          "maxLength" : 12
+        },
+        "genderTypeCode" :
+        {
+          "type" : "string",
+          "description" : "Gender Type",
+          "minLength" : 1,
+          "maxLength" : 12
+        },
+        "birthDate" :
+        {
+          "type" : "string",
+          "description" : "Birth Date",
+          "minLength" : 1,
+          "maxLength" : 12
+        },
+        "checkinStatus" :
+        {
+          "type" : "string",
+          "description" : "Check In Status",
+          "maxLength" : 3
+        },
+        "boardStatus" :
+        {
+          "type" : "string",
+          "description" : "Board Status",
+          "maxLength" : 3
+        },
+        "seatNumber" :
+        {
+          "type" : "string",
+          "description" : "Seat Number",
+          "maxLength" : 3
+        },
+        "vip" :
+        {
+          "type" : "string",
+          "description" : "VIP",
+          "maxLength" : 3
+        },
+        "vipDesc" :
+        {
+          "type" : "string",
+          "description" : "vipDesc",
+          "maxLength" : 3
+        },
+        "loyaltyDetails" :
+        {
+          "$ref" : "#/definitions/loyaltyDetails"
+        },
+        "contactEmail" :
+        {
+          "$ref" : "#/definitions/contactEmail"
+        }
+      },
+      "required" :
+      [
+        "loyaltyDetails"
+      ]
+    },
+    "Model 40" :
+    {
+      "type" : "object",
+      "properties" :
+      {
+        "Flight" :
+        {
+          "$ref" : "#/definitions/Flight"
+        },
+        "passenger" :
+        {
+          "$ref" : "#/definitions/Model 39"
+        }
+      }
+    }
+  },
+  "x-alt-definitions" :
+  {
+    "firstPassenger" :
+    {
+      "type" : "object",
+      "description" : "Lead passenger in booking, ordered by pax tattoo and ABN presence - having ABN ordered before not having ABN",
+      "properties" :
+      {
+        "passengerTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a passenger"
+        },
+        "prefix" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name prefix, e.g. Mr, Mrs",
+          "maxLength" : 12
+        },
+        "firstName" :
+        {
+          "type" : "string",
+          "description" : "Passenger first name",
+          "maxLength" : 56
+        },
+        "surName" :
+        {
+          "type" : "string",
+          "description" : "Passenger last name",
+          "maxLength" : 57
+        },
+        "ffNo" :
+        {
+          "type" : "string",
+          "description" : "Frequent flyer number, min 10 digits for QFF (left padded with 0s if required)",
+          "maxLength" : 16
+        },
+        "ffScheme" :
+        {
+          "type" : "string",
+          "description" : "Frequent flyer scheme code",
+          "maxLength" : 3
+        }
+      },
+      "required" :
+      [
+        "passengerTattoo",
+        "prefix",
+        "firstName",
+        "surName"
+      ]
+    },
+    "Model 1" :
+    {
+      "type" : "object",
+      "description" : "Car booking",
+      "properties" :
+      {
+        "pnr" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name Record, e.g. 2C8HZU",
+          "minLength" : 6,
+          "maxLength" : 6
+        },
+        "travelPlanID" :
+        {
+          "type" : "string",
+          "description" : "Travel plan ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "bookingID" :
+        {
+          "type" : "string",
+          "description" : "Booking ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "pnrCreationDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Booking creation Date, YYYY-MM-DD, e.g. 2017-01-18"
+        },
+        "paxQuantity" :
+        {
+          "type" : "integer",
+          "description" : "PNR Passenger count",
+          "minimum" : 1,
+          "maximum" : 90
+        },
+        "firstPassenger" :
+        {
+          "$ref" : "#/x-alt-definitions/firstPassenger"
+        },
+        "timestamp" :
+        {
+          "type" : "integer",
+          "description" : "timestamp representing Pick up date and time of car (UTC) (mandatory). Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "type" :
+        {
+          "type" : "string",
+          "description" : "Type of object",
+          "enum" :
+          [
+            "car"
+          ]
+        },
+        "carModelDesc" :
+        {
+          "type" : "string",
+          "description" : "Car model type, e.g. NISSAN MICRA/SIMILAR",
+          "maxLength" : 70
+        },
+        "carCompanyCode" :
+        {
+          "type" : "string",
+          "description" : "Car company code, e.g. ZD",
+          "maxLength" : 3
+        },
+        "carCompanyName" :
+        {
+          "type" : "string",
+          "description" : "Car company name, e.g. BUDGET",
+          "maxLength" : 35
+        },
+        "carReservationNo" :
+        {
+          "type" : "string",
+          "description" : "Car company reservation number, e.g. 44694437AU4",
+          "maxLength" : 20
+        },
+        "pickUpDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Pick up date of car (local), YYYY-MM-DD, e.g. 2017-08-03"
+        },
+        "pickUpUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Pick up date of car (UTC), YYYY-MM-DD, e.g. 2017-08-03"
+        },
+        "pickUpTime" :
+        {
+          "type" : "string",
+          "description" : "Pick up time of car (local) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "pickUpUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Pick up time of car (UTC) hh:mm:ss (24 hour time), e.g. \"00:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "pickUpLocation" :
+        {
+          "type" : "string",
+          "description" : "Pick up location, e.g. SYD",
+          "maxLength" : 4
+        },
+        "dropOffDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Drop off date of car (local), YYYY-MM-DD, e.g. 2017-08-10"
+        },
+        "dropOffUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Drop off date of car (UTC), YYYY-MM-DD, e.g. 2017-08-10"
+        },
+        "dropOffTime" :
+        {
+          "type" : "string",
+          "description" : "Drop off time of car (local) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "dropOffUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Drop off time of car (UTC) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        }
+      },
+      "required" :
+      [
+        "pnr",
+        "travelPlanID",
+        "bookingID",
+        "pnrCreationDate",
+        "paxQuantity",
+        "timestamp",
+        "type",
+        "carModelDesc",
+        "carCompanyCode",
+        "carCompanyName",
+        "carReservationNo",
+        "pickUpDate",
+        "pickUpUTCDate",
+        "pickUpTime",
+        "pickUpUTCTime",
+        "pickUpLocation",
+        "dropOffDate",
+        "dropOffUTCDate",
+        "dropOffTime",
+        "dropOffUTCTime"
+      ]
+    },
+    "Model 2" :
+    {
+      "type" : "object",
+      "description" : "Lead passenger in booking, ordered by pax tattoo and ABN presence - having ABN ordered before not having ABN",
+      "properties" :
+      {
+        "passengerTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a passenger"
+        },
+        "prefix" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name prefix, e.g. Mr, Mrs",
+          "maxLength" : 12
+        },
+        "firstName" :
+        {
+          "type" : "string",
+          "description" : "Passenger first name",
+          "maxLength" : 56
+        },
+        "surName" :
+        {
+          "type" : "string",
+          "description" : "Passenger last name",
+          "maxLength" : 57
+        },
+        "ffNo" :
+        {
+          "type" : "string",
+          "description" : "Frequent flyer number, min 10 digits for QFF (left padded with 0s if required)",
+          "maxLength" : 16
+        },
+        "ffScheme" :
+        {
+          "type" : "string",
+          "description" : "Frequent flyer scheme code",
+          "maxLength" : 3
+        },
+        "reservationStatus" :
+        {
+          "type" : "string",
+          "description" : "Reservation status, e.g. HK, Confirmed, Waitlisted",
+          "maxLength" : 2
+        }
+      },
+      "required" :
+      [
+        "passengerTattoo",
+        "prefix",
+        "firstName",
+        "surName",
+        "reservationStatus"
+      ]
+    },
+    "Model 3" :
+    {
+      "type" : "object",
+      "description" : "Flight booking",
+      "properties" :
+      {
+        "pnr" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name Record, e.g. 2C8HZU",
+          "minLength" : 6,
+          "maxLength" : 6
+        },
+        "travelPlanID" :
+        {
+          "type" : "string",
+          "description" : "Travel plan ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "bookingID" :
+        {
+          "type" : "string",
+          "description" : "Booking ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "pnrCreationDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Booking creation Date, YYYY-MM-DD, e.g. 2017-01-18"
+        },
+        "paxQuantity" :
+        {
+          "type" : "integer",
+          "description" : "PNR Passenger count",
+          "minimum" : 1,
+          "maximum" : 90
+        },
+        "firstPassenger" :
+        {
+          "$ref" : "#/x-alt-definitions/Model 2"
+        },
+        "timestamp" :
+        {
+          "type" : "integer",
+          "description" : "timestamp representing Departure date of flight segment (UTC). Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "type" :
+        {
+          "type" : "string",
+          "description" : "Type of object",
+          "enum" :
+          [
+            "flight"
+          ]
+        },
+        "segmentTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a flight in a booking"
+        },
+        "mktCarrier" :
+        {
+          "type" : "string",
+          "description" : "Marketing Carrier Eg: QF, EK",
+          "maxLength" : 4
+        },
+        "mktFlightNo" :
+        {
+          "type" : "string",
+          "description" : "Marketing Flight Number Eg: 0001, 0410",
+          "minLength" : 4,
+          "maxLength" : 4,
+          "pattern" : "^[0-9]+$"
+        },
+        "departureDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Departure date of flight segment (local), e.g. 2016-12-26"
+        },
+        "departureUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Departure date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "departureTime" :
+        {
+          "type" : "string",
+          "description" : "Departure time of flight segment (local), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "departureUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Departure time of flight segment (UTC), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "departurePort" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "arrivalDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Arrival date of flight segment (local), e.g. 2016-12-26"
+        },
+        "arrivalUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Arrival date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "arrivalTime" :
+        {
+          "type" : "string",
+          "description" : "Arrival time of flight segment (local), e.g. HH:MM:SS",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "arrivalUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Arrival time of flight segment (UTC), e.g. HH:MM:SS",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "arrivalPort" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3
+        }
+      },
+      "required" :
+      [
+        "pnr",
+        "travelPlanID",
+        "bookingID",
+        "pnrCreationDate",
+        "paxQuantity",
+        "timestamp",
+        "type",
+        "segmentTattoo",
+        "mktCarrier",
+        "mktFlightNo",
+        "departureDate",
+        "departureUTCDate",
+        "departureTime",
+        "departureUTCTime",
+        "departurePort",
+        "arrivalDate",
+        "arrivalUTCDate",
+        "arrivalTime",
+        "arrivalUTCTime",
+        "arrivalPort"
+      ]
+    },
+    "Model 4" :
+    {
+      "type" : "object",
+      "description" : "Credit voucher booking",
+      "properties" :
+      {
+        "pnr" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name Record, e.g. 2C8HZU",
+          "minLength" : 6,
+          "maxLength" : 6
+        },
+        "travelPlanID" :
+        {
+          "type" : "string",
+          "description" : "Travel plan ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "bookingID" :
+        {
+          "type" : "string",
+          "description" : "Booking ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "pnrCreationDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Booking creation Date, YYYY-MM-DD, e.g. 2017-01-18"
+        },
+        "paxQuantity" :
+        {
+          "type" : "integer",
+          "description" : "PNR Passenger count",
+          "minimum" : 1,
+          "maximum" : 90
+        },
+        "firstPassenger" :
+        {
+          "$ref" : "#/x-alt-definitions/firstPassenger"
+        },
+        "timestamp" :
+        {
+          "type" : "integer",
+          "description" : "timestamp representing Expiry date of credit voucher (UTC). Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "type" :
+        {
+          "type" : "string",
+          "description" : "Type of object",
+          "enum" :
+          [
+            "credit"
+          ]
+        },
+        "creditVoucherAmount" :
+        {
+          "type" : "number",
+          "description" : "Credit voucher amount",
+          "maximum" : 1000000000000000,
+          "x-constraint" :
+          {
+            "precision" : 3
+          }
+        },
+        "creditVoucherCurrency" :
+        {
+          "type" : "string",
+          "description" : "Credit voucher currency code Eg: AUD",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "creditVoucherExpiryUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Expiry date of credit voucher (UTC) yyyy-mm-dd format (mandatory) , e.g. 2018-01-18"
+        }
+      },
+      "required" :
+      [
+        "pnr",
+        "travelPlanID",
+        "bookingID",
+        "pnrCreationDate",
+        "paxQuantity",
+        "timestamp",
+        "type",
+        "creditVoucherAmount",
+        "creditVoucherCurrency",
+        "creditVoucherExpiryUTCDate"
+      ]
+    },
+    "Model 5" :
+    {
+      "type" : "object",
+      "description" : "Gift voucher booking",
+      "properties" :
+      {
+        "pnr" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name Record, e.g. 2C8HZU",
+          "minLength" : 6,
+          "maxLength" : 6
+        },
+        "travelPlanID" :
+        {
+          "type" : "string",
+          "description" : "Travel plan ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "bookingID" :
+        {
+          "type" : "string",
+          "description" : "Booking ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "pnrCreationDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Booking creation Date, YYYY-MM-DD, e.g. 2017-01-18"
+        },
+        "paxQuantity" :
+        {
+          "type" : "integer",
+          "description" : "PNR Passenger count",
+          "minimum" : 1,
+          "maximum" : 90
+        },
+        "firstPassenger" :
+        {
+          "$ref" : "#/x-alt-definitions/firstPassenger"
+        },
+        "timestamp" :
+        {
+          "type" : "integer",
+          "description" : "timestamp representing Expiry date of gift voucher (UTC). Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "type" :
+        {
+          "type" : "string",
+          "description" : "Type of object",
+          "enum" :
+          [
+            "gift"
+          ]
+        },
+        "giftVoucherAmount" :
+        {
+          "type" : "number",
+          "description" : "Gift voucher amount",
+          "maximum" : 1000000000000000,
+          "x-constraint" :
+          {
+            "precision" : 3
+          }
+        },
+        "giftVoucherCurrency" :
+        {
+          "type" : "string",
+          "description" : "Gift voucher currency code Eg: AUD",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "giftVoucherExpiryUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Expiry date of gift voucher (UTC) yyyy-mm-dd format (mandatory) , e.g. 2018-01-18"
+        }
+      },
+      "required" :
+      [
+        "pnr",
+        "travelPlanID",
+        "bookingID",
+        "pnrCreationDate",
+        "paxQuantity",
+        "timestamp",
+        "type",
+        "giftVoucherAmount",
+        "giftVoucherCurrency",
+        "giftVoucherExpiryUTCDate"
+      ]
+    },
+    "Model 6" :
+    {
+      "type" : "object",
+      "description" : "Car booking",
+      "properties" :
+      {
+        "pnr" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name Record, e.g. 2C8HZU",
+          "minLength" : 6,
+          "maxLength" : 6
+        },
+        "travelPlanID" :
+        {
+          "type" : "string",
+          "description" : "Travel plan ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "bookingID" :
+        {
+          "type" : "string",
+          "description" : "Booking ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "pnrCreationDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Booking creation Date, YYYY-MM-DD, e.g. 2017-01-18"
+        },
+        "timestamp" :
+        {
+          "type" : "integer",
+          "description" : "timestamp representing Pick up date and time of car (UTC) (mandatory). Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "type" :
+        {
+          "type" : "string",
+          "description" : "Type of object",
+          "enum" :
+          [
+            "car"
+          ]
+        },
+        "carModelDesc" :
+        {
+          "type" : "string",
+          "description" : "Car model type, e.g. NISSAN MICRA/SIMILAR",
+          "maxLength" : 70
+        },
+        "carCompanyCode" :
+        {
+          "type" : "string",
+          "description" : "Car company code, e.g. ZD",
+          "maxLength" : 3
+        },
+        "carCompanyName" :
+        {
+          "type" : "string",
+          "description" : "Car company name, e.g. BUDGET",
+          "maxLength" : 35
+        },
+        "carReservationNo" :
+        {
+          "type" : "string",
+          "description" : "Car company reservation number, e.g. 44694437AU4",
+          "maxLength" : 20
+        },
+        "pickUpDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Pick up date of car (local), YYYY-MM-DD, e.g. 2017-08-03"
+        },
+        "pickUpUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Pick up date of car (UTC), YYYY-MM-DD, e.g. 2017-08-03"
+        },
+        "pickUpTime" :
+        {
+          "type" : "string",
+          "description" : "Pick up time of car (local) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "pickUpUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Pick up time of car (UTC) hh:mm:ss (24 hour time), e.g. \"00:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "pickUpLocation" :
+        {
+          "type" : "string",
+          "description" : "Pick up location, e.g. SYD",
+          "maxLength" : 4
+        },
+        "dropOffDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Drop off date of car (local), YYYY-MM-DD, e.g. 2017-08-10"
+        },
+        "dropOffUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Drop off date of car (UTC), YYYY-MM-DD, e.g. 2017-08-10"
+        },
+        "dropOffTime" :
+        {
+          "type" : "string",
+          "description" : "Drop off time of car (local) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        },
+        "dropOffUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Drop off time of car (UTC) hh:mm:ss (24 hour time), e.g. \"10:30:00\"",
+          "pattern" : "^\\d\\d:\\d\\d:\\d\\d$"
+        }
+      },
+      "required" :
+      [
+        "pnr",
+        "travelPlanID",
+        "bookingID",
+        "pnrCreationDate",
+        "timestamp",
+        "type",
+        "carModelDesc",
+        "carCompanyCode",
+        "carCompanyName",
+        "carReservationNo",
+        "pickUpDate",
+        "pickUpUTCDate",
+        "pickUpTime",
+        "pickUpUTCTime",
+        "pickUpLocation",
+        "dropOffDate",
+        "dropOffUTCDate",
+        "dropOffTime",
+        "dropOffUTCTime"
+      ]
+    },
+    "Model 7" :
+    {
+      "type" : "object",
+      "description" : "Flight booking",
+      "properties" :
+      {
+        "pnr" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name Record, e.g. 2C8HZU",
+          "minLength" : 6,
+          "maxLength" : 6
+        },
+        "travelPlanID" :
+        {
+          "type" : "string",
+          "description" : "Travel plan ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "bookingID" :
+        {
+          "type" : "string",
+          "description" : "Booking ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "pnrCreationDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Booking creation Date, YYYY-MM-DD, e.g. 2017-01-18"
+        },
+        "timestamp" :
+        {
+          "type" : "integer",
+          "description" : "timestamp representing Departure date of flight segment (UTC). Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "type" :
+        {
+          "type" : "string",
+          "description" : "Type of object",
+          "enum" :
+          [
+            "flight"
+          ]
+        },
+        "segmentTattoo" :
+        {
+          "type" : "integer",
+          "description" : "A Reference number assigned by System to a flight in a booking"
+        },
+        "mktCarrier" :
+        {
+          "type" : "string",
+          "description" : "Marketing Carrier Eg: QF, EK",
+          "maxLength" : 4
+        },
+        "mktFlightNo" :
+        {
+          "type" : "string",
+          "description" : "Marketing Flight Number Eg: 0001, 0410",
+          "minLength" : 4,
+          "maxLength" : 4,
+          "pattern" : "^[0-9]+$"
+        },
+        "departureDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Departure date of flight segment (local), e.g. 2016-12-26"
+        },
+        "departureUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Departure date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "departureTime" :
+        {
+          "type" : "string",
+          "description" : "Departure time of flight segment (local), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "departureUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Departure time of flight segment (UTC), e.g. HH:MM:SS",
+          "maxLength" : 8
+        },
+        "departurePort" :
+        {
+          "type" : "string",
+          "description" : "Departure Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "arrivalDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Arrival date of flight segment (local), e.g. 2016-12-26"
+        },
+        "arrivalUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Arrival date of flight segment (UTC), e.g. 2016-12-26"
+        },
+        "arrivalTime" :
+        {
+          "type" : "string",
+          "description" : "Arrival time of flight segment (local), e.g. HH:MM:SS",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "arrivalUTCTime" :
+        {
+          "type" : "string",
+          "description" : "Arrival time of flight segment (UTC), e.g. HH:MM:SS",
+          "minLength" : 8,
+          "maxLength" : 8
+        },
+        "arrivalPort" :
+        {
+          "type" : "string",
+          "description" : "Arrival Airport Code, e.g. SYD",
+          "minLength" : 3,
+          "maxLength" : 3
+        }
+      },
+      "required" :
+      [
+        "pnr",
+        "travelPlanID",
+        "bookingID",
+        "pnrCreationDate",
+        "timestamp",
+        "type",
+        "segmentTattoo",
+        "mktCarrier",
+        "mktFlightNo",
+        "departureDate",
+        "departureUTCDate",
+        "departureTime",
+        "departureUTCTime",
+        "departurePort",
+        "arrivalDate",
+        "arrivalUTCDate",
+        "arrivalTime",
+        "arrivalUTCTime",
+        "arrivalPort"
+      ]
+    },
+    "Model 8" :
+    {
+      "type" : "object",
+      "description" : "Credit voucher booking",
+      "properties" :
+      {
+        "pnr" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name Record, e.g. 2C8HZU",
+          "minLength" : 6,
+          "maxLength" : 6
+        },
+        "travelPlanID" :
+        {
+          "type" : "string",
+          "description" : "Travel plan ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "bookingID" :
+        {
+          "type" : "string",
+          "description" : "Booking ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "pnrCreationDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Booking creation Date, YYYY-MM-DD, e.g. 2017-01-18"
+        },
+        "timestamp" :
+        {
+          "type" : "integer",
+          "description" : "timestamp representing Expiry date of credit voucher (UTC). Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "type" :
+        {
+          "type" : "string",
+          "description" : "Type of object",
+          "enum" :
+          [
+            "credit"
+          ]
+        },
+        "creditVoucherAmount" :
+        {
+          "type" : "number",
+          "description" : "Credit voucher amount",
+          "maximum" : 1000000000000000,
+          "x-constraint" :
+          {
+            "precision" : 3
+          }
+        },
+        "creditVoucherCurrency" :
+        {
+          "type" : "string",
+          "description" : "Credit voucher currency code Eg: AUD",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "creditVoucherExpiryUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Expiry date of credit voucher (UTC) yyyy-mm-dd format (mandatory) , e.g. 2018-01-18"
+        }
+      },
+      "required" :
+      [
+        "pnr",
+        "travelPlanID",
+        "bookingID",
+        "pnrCreationDate",
+        "timestamp",
+        "type",
+        "creditVoucherAmount",
+        "creditVoucherCurrency",
+        "creditVoucherExpiryUTCDate"
+      ]
+    },
+    "Model 9" :
+    {
+      "type" : "object",
+      "description" : "Gift voucher booking",
+      "properties" :
+      {
+        "pnr" :
+        {
+          "type" : "string",
+          "description" : "Passenger Name Record, e.g. 2C8HZU",
+          "minLength" : 6,
+          "maxLength" : 6
+        },
+        "travelPlanID" :
+        {
+          "type" : "string",
+          "description" : "Travel plan ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "bookingID" :
+        {
+          "type" : "string",
+          "description" : "Booking ID for booking, bigint stored as string",
+          "maxLength" : 20,
+          "pattern" : "^[0-9]+$"
+        },
+        "pnrCreationDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Booking creation Date, YYYY-MM-DD, e.g. 2017-01-18"
+        },
+        "timestamp" :
+        {
+          "type" : "integer",
+          "description" : "timestamp representing Expiry date of gift voucher (UTC). Date time in MS from 1970 (the number of milliseconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601 1970-01-01T000000Z)).",
+          "minimum" : 0,
+          "maximum" : 9007199254740990
+        },
+        "type" :
+        {
+          "type" : "string",
+          "description" : "Type of object",
+          "enum" :
+          [
+            "gift"
+          ]
+        },
+        "giftVoucherAmount" :
+        {
+          "type" : "number",
+          "description" : "Gift voucher amount",
+          "maximum" : 1000000000000000,
+          "x-constraint" :
+          {
+            "precision" : 3
+          }
+        },
+        "giftVoucherCurrency" :
+        {
+          "type" : "string",
+          "description" : "Gift voucher currency code Eg: AUD",
+          "minLength" : 3,
+          "maxLength" : 3
+        },
+        "giftVoucherExpiryUTCDate" :
+        {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Expiry date of gift voucher (UTC) yyyy-mm-dd format (mandatory) , e.g. 2018-01-18"
+        }
+      },
+      "required" :
+      [
+        "pnr",
+        "travelPlanID",
+        "bookingID",
+        "pnrCreationDate",
+        "timestamp",
+        "type",
+        "giftVoucherAmount",
+        "giftVoucherCurrency",
+        "giftVoucherExpiryUTCDate"
+      ]
+    }
+  }
+},
+"apiConf":{
+	"name": "CAPCRE API LargeSwagger",
+	"domain": "/test",
+	"includeVersion": true,
+	"internalGateway":false,
+    "externalGateway":false,
+	"jetstarInternalGateway":true,
+	"jetstarExternalGateway":true,
+	  "wso2":true
+}
+}

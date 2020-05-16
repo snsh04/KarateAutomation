@@ -1,0 +1,7 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://apigw.random.com/countries">
+  
+   <soapenv:Body>
+      <ns:getCountriesRequest>
+      </ns:getCountriesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

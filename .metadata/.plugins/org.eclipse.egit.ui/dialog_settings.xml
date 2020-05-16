@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="EGit.KnownHosts">
+		<item value="bitbucket.org"/>
+		<item value="github.com"/>
+		<item value="git.eclipse.org"/>
+		<item value="stash.qcpaws.qantas.com.au"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://617769@stash.qcpaws.qantas.com.au/scm/ams10-a878/apigwtst.git"/>
+	</list>
+</section>

@@ -1,0 +1,7 @@
+Lambda APIs can ONLY be registered through the Pipeline (not manually through the Publisher portal).
+
+A Lambda API is identified by the API Admin when the config.lambda property is set to true.
+
+When mapping the Swagger and Config file to an API definition to register to WSO2, the endpoint property is set to (see note above)
+
+<apiawsps-dns-hostname>/<domain>/<basepath>/<version>

@@ -1,0 +1,269 @@
+{
+  "apiConf": {
+    "subscriptionTiers": [
+      "Test",
+      "Unlimited",
+      "Bronze",
+      "Silver",
+      "Gold"
+    ],
+    "domain": "flight",
+    "backupToS3": false,
+    "wso2": true,
+    "defaultVersion": true,
+    "includeVersion": true,
+    "redocUpload": true,
+    "corsHeaders": {
+      "Access-Control-Allow-Headers": "origin, content-type, accept, x-appid, x-sessionid, x-corrid,hb",
+      "Access-Control-Allow-Methods": "GET",
+      "Access-Control-Allow-Origin": "freight.random.com,batman.com",
+      "Access-Control-Allow-Credentials": "false"
+    }
+  },
+  "swagger": {
+    "swagger": "2.0",
+    "info": {
+      "version": "v3",
+      "title": "ReDocLongMrkAll",
+      "description": "test",
+      "x-markdown-description": "This is a sample markdown description. You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/). For this sample, you can use the api key `special-key` to test the authorization filters. # Introduction This API is documented in **OpenAPI format** and is based on [Petstore sample](http://petstore.swagger.io/) provided by [swagger.io](http://swagger.io) team. It was **extended** to illustrate features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo) tool and [ReDoc](https://github.com/Redocly/redoc) documentation. In addition to standard OpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md). # OpenAPI Specification This API is documented in **OpenAPI format** and is based on [Petstore sample](http://petstore.swagger.io/) provided by [swagger.io](http://swagger.io) team. It was **extended** to illustrate features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo) tool and [ReDoc](https://github.com/Redocly/redoc) documentation. In addition to standard OpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md). # Cross-Origin Resource Sharing This API features Cross-Origin Resource Sharing (CORS) implemented in compliance with  [W3C spec](https://www.w3.org/TR/cors/). And that allows cross-domain communication from the browser. All responses have a wildcard same-origin which makes them completely public and accessible to everyone, including any code on any site. # Authentication Petstore offers two forms of authentication: - API Key - OAuth2 OAuth2 - an open protocol to allow secure authorization in a simple and standard method from web, mobile and desktop applications. <!-- ReDoc-Inject: <security-definitions> -->",
+      "x-businessOwner": {
+        "name": "ad",
+        "email": "regtest@random.com"
+      },
+      "x-technicalOwner": {
+        "name": "ad",
+        "email": "regtest@random.com"
+      }
+    },
+    "host": "api.github.com",
+    "basePath": "/countryRedocMarkAll",
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/countries": {
+        "get": {
+          "x-auth-type": "None",
+          "summary": "List of all countries",
+          "description": "Get a list of two countries",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "user_key",
+              "in": "query",
+              "description": "Your API access key",
+              "required": false,
+              "x-data-threescale-name": "user_keys",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "response",
+              "schema": {
+                "$ref": "#/definitions/ResponseModel"
+              }
+            },
+            "default": {
+              "description": "unexpected error",
+              "schema": {
+                "$ref": "#/definitions/ErrorModel"
+              }
+            }
+          }
+        },
+        "put": {
+          "x-auth-type": "None",
+          "summary": "Echo a PUT Request",
+          "description": "Echo a PUT Request",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "example",
+              "in": "query",
+              "description": "Example Query Param",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Valid Response"
+            }
+          }
+        },
+        "delete": {
+          "x-auth-type": "None",
+          "summary": "Echo a PUT Request",
+          "description": "Echo a PUT Request",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "example",
+              "in": "query",
+              "description": "Example Query Param",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Valid Response"
+            }
+          }
+        },
+        "patch": {
+          "x-auth-type": "None",
+          "summary": "Echo a PATCH Request",
+          "description": "Echo a PATCH Request",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "example",
+              "in": "query",
+              "description": "Example Query Param",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Valid Response"
+            }
+          }
+        },
+        "post": {
+          "x-auth-type": "None",
+          "summary": "Add a new country",
+          "description": "Create a new country",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "user_key",
+              "in": "query",
+              "description": "Your API access key",
+              "required": false,
+              "x-data-threescale-name": "user_keys",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "response",
+              "schema": {
+                "$ref": "#/definitions/ResponseModel"
+              }
+            },
+            "default": {
+              "description": "unexpected error",
+              "schema": {
+                "$ref": "#/definitions/ErrorModel"
+              }
+            }
+          }
+        }
+      },
+      "/country/countries/{countryId}": {
+        "get": {
+          "x-auth-type": "None",
+          "summary": "Get a specific country by ID (Example: 'au')",
+          "description": "Get details of a single country",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "user_key",
+              "in": "query",
+              "description": "Your API access key",
+              "required": false,
+              "x-data-threescale-name": "user_keys",
+              "type": "string"
+            },
+            {
+              "name": "countryId",
+              "in": "query",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "response",
+              "schema": {
+                "$ref": "#/definitions/ResponseModel"
+              }
+            },
+            "default": {
+              "description": "unexpected error",
+              "schema": {
+                "$ref": "#/definitions/ErrorModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "ResponseModel": {
+        "type": "object",
+        "required": [
+          "method",
+          "path",
+          "args",
+          "headers"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "capital": {
+            "type": "string"
+          },
+          "altSpellings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "region": {
+            "type": "string"
+          },
+          "subregion": {
+            "type": "string"
+          },
+          "population": {
+            "type": "integer"
+          }
+        }
+      },
+      "ErrorModel": {
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
